@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
 <title>Team Victorioso | Servicios Financieros</title>
 
@@ -40,7 +45,7 @@ html{
 body{
   font-family:Arial,Helvetica,sans-serif;
   background:var(--dark);
-  color:#fff;
+  color:white;
   line-height:1.6;
 }
 
@@ -55,8 +60,7 @@ a{
 
 button,
 input,
-textarea,
-select{
+textarea{
   font:inherit;
 }
 
@@ -97,8 +101,6 @@ select{
   padding:14px 23px;
   border-radius:10px;
   font-weight:900;
-  border:none;
-  cursor:pointer;
 }
 
 
@@ -142,8 +144,16 @@ nav{
 .hero{
   padding:62px 0;
   background:
-    radial-gradient(circle at 85% 20%,rgba(18,120,230,.28),transparent 35%),
-    linear-gradient(135deg,#020b14,#06223f);
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(18,120,230,.28),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #020b14,
+      #06223f
+    );
 }
 
 .hero-grid{
@@ -213,12 +223,16 @@ nav{
   padding:25px;
   border-radius:16px;
   border:1px solid var(--border);
-  background:linear-gradient(145deg,#092846,#06172a);
+  background:
+    linear-gradient(
+      145deg,
+      #092846,
+      #06172a
+    );
 }
 
 .card h3{
   margin-bottom:8px;
-  font-size:19px;
 }
 
 .card p{
@@ -231,7 +245,12 @@ nav{
 
 .requirements{
   padding:70px 0;
-  background:linear-gradient(135deg,#07315c,#03182c);
+  background:
+    linear-gradient(
+      135deg,
+      #07315c,
+      #03182c
+    );
 }
 
 .req-grid{
@@ -291,19 +310,19 @@ nav{
 /* APPLICATION */
 
 .application{
+  padding:75px 0;
   background:var(--light);
   color:#071321;
-  padding:75px 0;
 }
 
 .application-header{
-  text-align:center;
   max-width:760px;
+  text-align:center;
   margin:0 auto 38px;
 }
 
 .application .section-label{
-  color:#aa7c29;
+  color:#a87825;
 }
 
 .application-header h2{
@@ -357,8 +376,8 @@ nav{
   gap:7px;
 }
 
-.full{
-  grid-column:1 / -1;
+.field.full{
+  grid-column:1/-1;
 }
 
 .field label,
@@ -372,7 +391,7 @@ nav{
   width:100%;
   border:1px solid #cad5df;
   border-radius:10px;
-  padding:13px 14px;
+  padding:14px;
   background:#f9fbfd;
   color:#071321;
   outline:none;
@@ -381,7 +400,8 @@ nav{
 .field input:focus,
 .field textarea:focus{
   border-color:#148cf2;
-  box-shadow:0 0 0 3px rgba(20,140,242,.11);
+  box-shadow:
+    0 0 0 3px rgba(20,140,242,.11);
 }
 
 textarea{
@@ -389,13 +409,12 @@ textarea{
 }
 
 .question{
-  padding:18px 0;
-  border-bottom:1px solid #e8edf2;
+  padding:19px 0;
+  border-bottom:1px solid #e6ecf2;
 }
 
 .question:last-child{
   border-bottom:none;
-  padding-bottom:0;
 }
 
 .choices{
@@ -413,114 +432,149 @@ textarea{
   display:flex;
   align-items:center;
   gap:9px;
+  padding:12px 15px;
   border:1px solid #d4dde6;
   border-radius:10px;
-  padding:11px 14px;
   background:#f9fbfd;
   cursor:pointer;
 }
 
 .choice input{
   accent-color:#0875d8;
+  width:18px;
+  height:18px;
 }
 
 
-/* FINAL SUBMISSION */
+/* SUBMIT ENDING */
 
 .submit-section{
-  background:
-    radial-gradient(circle at top right,rgba(41,160,255,.20),transparent 35%),
-    linear-gradient(135deg,#04182d,#082848);
-  color:white;
+  max-width:850px;
+  margin:auto;
+  padding:35px;
   border-radius:20px;
-  padding:34px;
-  border:1px solid rgba(255,255,255,.12);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(41,160,255,.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #04182d,
+      #082848
+    );
+  color:white;
+}
+
+.submit-section .section-label{
+  color:var(--gold2);
 }
 
 .submit-section h3{
-  font-size:27px;
-  margin-bottom:10px;
+  font-size:28px;
+  margin-bottom:8px;
 }
 
-.submit-section > p{
+.submit-copy{
   color:#afc2d7;
-  margin-bottom:24px;
+  margin-bottom:22px;
 }
 
 .agreement{
   display:flex;
   align-items:flex-start;
   gap:12px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:12px;
   padding:16px;
-  color:#d4dfeb;
+  border-radius:12px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  color:#d6e0eb;
   font-size:14px;
 }
 
 .agreement input{
-  width:18px;
-  height:18px;
-  min-width:18px;
+  width:19px;
+  height:19px;
+  min-width:19px;
   margin-top:2px;
   accent-color:var(--gold);
 }
 
 .submit-btn{
+  display:block;
   width:100%;
   margin-top:22px;
-  padding:18px 20px;
+  padding:19px 20px;
   border:0;
   border-radius:11px;
-  cursor:pointer;
-  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold2),
+      var(--gold)
+    );
   color:#06111c;
-  font-size:16px;
   font-weight:900;
-  letter-spacing:.04em;
-  box-shadow:0 10px 30px rgba(220,174,85,.22);
+  font-size:16px;
+  cursor:pointer;
 }
 
-.submit-btn:active{
-  transform:scale(.99);
+.submit-btn:hover{
+  filter:brightness(1.05);
 }
 
 .submit-btn:disabled{
-  opacity:.7;
+  opacity:.65;
   cursor:not-allowed;
 }
 
 .form-note{
-  text-align:center;
-  color:#8399af;
+  color:#8ea2b7;
   font-size:12px;
   margin-top:12px;
-}
-
-
-/* SUCCESS MESSAGE */
-
-.success-message{
-  display:none;
-  max-width:850px;
-  margin:0 auto 25px;
-  background:#eaf8ef;
-  color:#135d34;
-  border:1px solid #b9e2c8;
-  border-radius:14px;
-  padding:22px;
   text-align:center;
 }
 
-.success-message.show{
-  display:block;
+
+/* STATUS */
+
+.form-status{
+  display:none;
+  max-width:850px;
+  margin:0 auto 20px;
+  padding:20px;
+  border-radius:13px;
+  text-align:center;
+  font-weight:700;
 }
 
-.success-message strong{
+.form-status.success{
   display:block;
-  font-size:20px;
-  margin-bottom:5px;
+  background:#e8f8ef;
+  color:#17623a;
+  border:1px solid #b7e0c8;
+}
+
+.form-status.error{
+  display:block;
+  background:#fff0f0;
+  color:#9a2525;
+  border:1px solid #edc1c1;
+}
+
+
+/* HONEYPOT */
+
+.hidden-field{
+  position:absolute;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  height:1px;
+  width:1px;
+  margin:-1px;
+  padding:0;
+  border:0;
 }
 
 
@@ -559,7 +613,7 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .full{
+  .field.full{
     grid-column:auto;
   }
 
@@ -579,11 +633,6 @@ footer{
   .contact,
   .application{
     padding:55px 0;
-  }
-
-  .nav-btn{
-    font-size:11px;
-    padding:9px 11px;
   }
 
   .form-section{
@@ -616,6 +665,7 @@ footer{
 </style>
 </head>
 
+
 <body>
 
 
@@ -623,17 +673,20 @@ footer{
 
 <nav>
 
-  <div class="container nav-inner">
+<div class="container nav-inner">
 
-    <div class="logo">
-      TEAM <span>VICTORIOSO</span>
-    </div>
-
-    <a class="nav-btn" href="#solicitud">
-      APLICAR
-    </a>
-
+  <div class="logo">
+    TEAM <span>VICTORIOSO</span>
   </div>
+
+  <a
+    href="#solicitud"
+    class="nav-btn"
+  >
+    APLICAR
+  </a>
+
+</div>
 
 </nav>
 
@@ -642,42 +695,45 @@ footer{
 
 <section class="hero">
 
-  <div class="container hero-grid">
+<div class="container hero-grid">
 
-    <div>
+  <div>
 
-      <div class="tag">
-        SERVICIOS FINANCIEROS
-      </div>
-
-      <h1>
-        TU FUTURO.<br>
-        <span>TUS TÉRMINOS.</span>
-      </h1>
-
-      <p>
-        Únete a Team Victorioso y descubre una oportunidad
-        profesional con flexibilidad, capacitación y desarrollo
-        dentro de la industria de servicios financieros.
-      </p>
-
-      <a class="btn" href="#solicitud">
-        COMPLETAR SOLICITUD
-      </a>
-
+    <div class="tag">
+      SERVICIOS FINANCIEROS
     </div>
 
+    <h1>
+      TU FUTURO.<br>
+      <span>TUS TÉRMINOS.</span>
+    </h1>
 
-    <div class="photo">
+    <p>
+      Únete a Team Victorioso y descubre una oportunidad
+      profesional con flexibilidad, capacitación y desarrollo
+      dentro de la industria de servicios financieros.
+    </p>
 
-      <img
-        src="file_00000000875881f684bc1fa35f8fa650.png"
-        alt="Team Victorioso"
-      >
-
-    </div>
+    <a
+      href="#solicitud"
+      class="btn"
+    >
+      COMPLETAR SOLICITUD
+    </a>
 
   </div>
+
+
+  <div class="photo">
+
+    <img
+      src="file_00000000875881f684bc1fa35f8fa650.png"
+      alt="Team Victorioso"
+    >
+
+  </div>
+
+</div>
 
 </section>
 
@@ -686,71 +742,73 @@ footer{
 
 <section class="info">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-label">
-      LA OPORTUNIDAD
-    </div>
+  <div class="section-label">
+    LA OPORTUNIDAD
+  </div>
 
-    <h2 class="title">
-      APRENDE. CRECE.
-      <span>CONSTRUYE.</span>
-    </h2>
+  <h2 class="title">
+    APRENDE. CRECE.
+    <span>CONSTRUYE.</span>
+  </h2>
 
-    <p class="intro">
-      Buscamos personas motivadas y dispuestas a aprender.
-      No necesitas comenzar como experto en finanzas.
-      Puedes desarrollar nuevas habilidades mientras recibes
-      capacitación y orientación profesional.
-    </p>
-
-
-    <div class="cards">
-
-      <div class="card">
-
-        <h3>
-          Flexibilidad
-        </h3>
-
-        <p>
-          Opciones que pueden adaptarse a distintos horarios
-          y niveles de disponibilidad.
-        </p>
-
-      </div>
+  <p class="intro">
+    Buscamos personas motivadas y dispuestas a aprender.
+    No necesitas comenzar como experto en finanzas.
+    Puedes desarrollar nuevas habilidades mientras recibes
+    capacitación y orientación profesional.
+  </p>
 
 
-      <div class="card">
-
-        <h3>
-          Capacitación y licenciamiento
-        </h3>
-
-        <p>
-          Aprende sobre la industria y recibe orientación
-          durante el proceso profesional correspondiente.
-        </p>
-
-      </div>
+  <div class="cards">
 
 
-      <div class="card">
+    <div class="card">
 
-        <h3>
-          Crecimiento e incentivos
-        </h3>
+      <h3>
+        Flexibilidad
+      </h3>
 
-        <p>
-          Desarrolla comunicación, liderazgo y educación
-          financiera con oportunidades basadas en desempeño.
-        </p>
-
-      </div>
+      <p>
+        Opciones que pueden adaptarse a distintos horarios
+        y niveles de disponibilidad.
+      </p>
 
     </div>
+
+
+    <div class="card">
+
+      <h3>
+        Capacitación y licenciamiento
+      </h3>
+
+      <p>
+        Aprende sobre la industria y recibe orientación
+        durante el proceso profesional correspondiente.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        Crecimiento e incentivos
+      </h3>
+
+      <p>
+        Desarrolla comunicación, liderazgo y educación financiera
+        con oportunidades basadas en desempeño.
+      </p>
+
+    </div>
+
 
   </div>
+
+</div>
 
 </section>
 
@@ -759,58 +817,58 @@ footer{
 
 <section class="requirements">
 
-  <div class="container req-grid">
+<div class="container req-grid">
 
-    <div>
+  <div>
 
-      <div class="section-label">
-        REQUISITOS
-      </div>
-
-      <h2 class="title">
-        ¿LISTO PARA
-        <span>DAR EL PASO?</span>
-      </h2>
-
-      <p class="intro">
-        Algunas actividades dentro de servicios financieros
-        requieren licencias, documentación y verificación
-        de antecedentes.
-      </p>
-
+    <div class="section-label">
+      REQUISITOS
     </div>
 
+    <h2 class="title">
+      ¿LISTO PARA
+      <span>DAR EL PASO?</span>
+    </h2>
 
-    <div class="req-list">
+    <p class="intro">
+      Algunas actividades dentro de servicios financieros
+      requieren licencias, documentación y verificación
+      de antecedentes.
+    </p>
 
-      <div class="req">
-        <strong>✓</strong>
-        Tener 18 años o más.
-      </div>
+  </div>
 
-      <div class="req">
-        <strong>✓</strong>
-        Ser elegible para trabajar en los Estados Unidos.
-      </div>
 
-      <div class="req">
-        <strong>✓</strong>
-        Tener un número de Seguro Social válido.
-      </div>
+  <div class="req-list">
 
-      <div class="req">
-        <strong>✓</strong>
-        Cumplir con los requisitos de verificación de antecedentes.
-      </div>
+    <div class="req">
+      <strong>✓</strong>
+      Tener 18 años o más.
+    </div>
 
-      <div class="req">
-        <strong>✓</strong>
-        Estar dispuesto a completar capacitación y licenciamiento.
-      </div>
+    <div class="req">
+      <strong>✓</strong>
+      Ser elegible para trabajar en los Estados Unidos.
+    </div>
 
+    <div class="req">
+      <strong>✓</strong>
+      Tener un número de Seguro Social válido.
+    </div>
+
+    <div class="req">
+      <strong>✓</strong>
+      Cumplir con los requisitos de verificación de antecedentes.
+    </div>
+
+    <div class="req">
+      <strong>✓</strong>
+      Estar dispuesto a completar capacitación y licenciamiento.
     </div>
 
   </div>
+
+</div>
 
 </section>
 
@@ -819,44 +877,38 @@ footer{
 
 <section class="contact">
 
-  <div class="container">
+<div class="container">
 
-    <div class="contact-box">
+  <div class="contact-box">
+
+    <div>
+
+      <div class="section-label">
+        TU CONTACTO
+      </div>
+
+      <h2 class="title">
+        HARRY
+        <span>SMITH</span>
+      </h2>
+
+    </div>
+
+
+    <div class="contact-details">
+
+      <div>
+        <strong>Correo electrónico</strong><br>
+        Hsmith@teamvictorioso
+      </div>
 
       <div>
 
-        <div class="section-label">
-          TU CONTACTO
-        </div>
+        <strong>Teléfono</strong><br>
 
-        <h2 class="title">
-          HARRY
-          <span>SMITH</span>
-        </h2>
-
-      </div>
-
-
-      <div class="contact-details">
-
-        <div>
-
-          <strong>Correo electrónico</strong><br>
-
-          Hsmith@teamvictorioso
-
-        </div>
-
-
-        <div>
-
-          <strong>Teléfono</strong><br>
-
-          <a href="tel:+19783906747">
-            978-390-6747
-          </a>
-
-        </div>
+        <a href="tel:+19783906747">
+          978-390-6747
+        </a>
 
       </div>
 
@@ -864,439 +916,479 @@ footer{
 
   </div>
 
+</div>
+
 </section>
 
 
 <!-- APPLICATION -->
 
-<section class="application" id="solicitud">
+<section
+  class="application"
+  id="solicitud"
+>
 
-  <div class="container">
+<div class="container">
 
-    <div class="application-header">
 
-      <div class="section-label">
-        SOLICITUD
+  <div class="application-header">
+
+    <div class="section-label">
+      SOLICITUD
+    </div>
+
+    <h2>
+      DA EL SIGUIENTE PASO.
+    </h2>
+
+    <p>
+      Completa la solicitud para que Team Victorioso pueda
+      conocer más sobre ti, tus metas y tu disponibilidad.
+    </p>
+
+  </div>
+
+
+  <div
+    class="form-status"
+    id="formStatus"
+  ></div>
+
+
+  <form
+    class="application-form"
+    id="applicationForm"
+    name="team-victorioso-application"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+  >
+
+
+    <!-- REQUIRED BY NETLIFY -->
+
+    <input
+      type="hidden"
+      name="form-name"
+      value="team-victorioso-application"
+    >
+
+
+    <!-- SPAM PROTECTION -->
+
+    <p class="hidden-field">
+
+      <label>
+        No completar:
+
+        <input
+          name="bot-field"
+          type="text"
+        >
+
+      </label>
+
+    </p>
+
+
+    <!-- 01 PERSONAL -->
+
+    <div class="form-section">
+
+      <div class="form-number">
+        01 · INFORMACIÓN PERSONAL
       </div>
 
-      <h2>
-        DA EL SIGUIENTE PASO.
-      </h2>
+      <h3>
+        Cuéntanos sobre ti
+      </h3>
 
-      <p>
-        Completa la solicitud para que Team Victorioso pueda
-        conocer más sobre ti, tus metas y tu disponibilidad.
-      </p>
+
+      <div class="form-grid">
+
+
+        <div class="field full">
+
+          <label for="nombre">
+            Nombre completo *
+          </label>
+
+          <input
+            id="nombre"
+            name="nombre"
+            type="text"
+            autocomplete="name"
+            required
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="email">
+            Correo electrónico *
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="telefono">
+            Número de teléfono *
+          </label>
+
+          <input
+            id="telefono"
+            name="telefono"
+            type="tel"
+            autocomplete="tel"
+            required
+          >
+
+        </div>
+
+
+        <div class="field full">
+
+          <label for="ubicacion">
+            Ciudad y estado donde vives actualmente *
+          </label>
+
+          <input
+            id="ubicacion"
+            name="ubicacion"
+            type="text"
+            placeholder="Ej. Miami, Florida"
+            required
+          >
+
+        </div>
+
+
+      </div>
 
     </div>
 
 
-    <!-- SUCCESS MESSAGE -->
+    <!-- 02 ELIGIBILITY -->
 
-    <div
-      class="success-message"
-      id="successMessage"
-    >
+    <div class="form-section">
 
-      <strong>
-        ¡Solicitud enviada!
-      </strong>
+      <div class="form-number">
+        02 · ELEGIBILIDAD
+      </div>
 
-      Gracias por tu interés en Team Victorioso.
-      Tu información fue enviada correctamente.
+      <h3>
+        Información básica
+      </h3>
+
+
+      <div class="question">
+
+        <div class="question-title">
+          ¿Tienes 18 años de edad o más? *
+        </div>
+
+        <div class="choices">
+
+          <label class="choice">
+
+            <input
+              type="radio"
+              name="mayor_de_18"
+              value="Sí"
+              required
+            >
+
+            Sí
+
+          </label>
+
+
+          <label class="choice">
+
+            <input
+              type="radio"
+              name="mayor_de_18"
+              value="No"
+            >
+
+            No
+
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <div class="question">
+
+        <div class="question-title">
+          ¿Eres elegible para trabajar legalmente
+          en los Estados Unidos? *
+        </div>
+
+        <div class="choices">
+
+          <label class="choice">
+
+            <input
+              type="radio"
+              name="elegible_trabajo_usa"
+              value="Sí"
+              required
+            >
+
+            Sí
+
+          </label>
+
+
+          <label class="choice">
+
+            <input
+              type="radio"
+              name="elegible_trabajo_usa"
+              value="No"
+            >
+
+            No
+
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <div class="question">
+
+        <div class="question-title">
+          ¿Tienes un número de Seguro Social válido? *
+        </div>
+
+        <div class="choices">
+
+          <label class="choice">
+
+            <input
+              type="radio"
+              name="ssn_valido"
+              value="Sí"
+              required
+            >
+
+            Sí
+
+          </label>
+
+
+          <label class="choice">
+
+            <input
+              type="radio"
+              name="ssn_valido"
+              value="No"
+            >
+
+            No
+
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <div class="question">
+
+        <div class="question-title">
+          ¿Estás dispuesto/a a completar una verificación
+          federal de antecedentes si es requerida? *
+        </div>
+
+        <div class="choices">
+
+          <label class="choice">
+
+            <input
+              type="radio"
+              name="verificacion_antecedentes"
+              value="Sí"
+              required
+            >
+
+            Sí
+
+          </label>
+
+
+          <label class="choice">
+
+            <input
+              type="radio"
+              name="verificacion_antecedentes"
+              value="No"
+            >
+
+            No
+
+          </label>
+
+        </div>
+
+      </div>
+
 
     </div>
 
 
-    <!-- NETLIFY FORM -->
+    <!-- 03 LICENSING -->
 
-    <form
-      class="application-form"
-      id="applicationForm"
-      name="team-victorioso-application"
-      method="POST"
-      action="/?success=true#solicitud"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-    >
+    <div class="form-section">
 
-      <input
-        type="hidden"
-        name="form-name"
-        value="team-victorioso-application"
-      >
+      <div class="form-number">
+        03 · LICENCIAMIENTO
+      </div>
+
+      <h3>
+        Experiencia y capacitación
+      </h3>
 
 
-      <!-- BOT FIELD -->
+      <div class="question">
 
-      <p style="display:none;">
-
-        <label>
-
-          No completar
-
-          <input name="bot-field">
-
-        </label>
-
-      </p>
-
-
-      <!-- 01 -->
-
-      <div class="form-section">
-
-        <div class="form-number">
-          01 · INFORMACIÓN PERSONAL
+        <div class="question-title">
+          ¿Cuál describe mejor tu situación actual? *
         </div>
 
-        <h3>
-          Cuéntanos sobre ti
-        </h3>
 
+        <div class="choices vertical">
 
-        <div class="form-grid">
-
-          <div class="field full">
-
-            <label for="nombre">
-              Nombre completo *
-            </label>
+          <label class="choice">
 
             <input
-              id="nombre"
-              name="nombre"
-              type="text"
-              autocomplete="name"
+              type="radio"
+              name="estado_licencia"
+              value="Actualmente tengo licencia"
               required
             >
 
-          </div>
+            Actualmente tengo licencia.
+
+          </label>
 
 
-          <div class="field">
-
-            <label for="email">
-              Correo electrónico *
-            </label>
+          <label class="choice">
 
             <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              required
+              type="radio"
+              name="estado_licencia"
+              value="Actualmente estoy en proceso"
             >
 
-          </div>
+            Actualmente estoy en proceso.
+
+          </label>
 
 
-          <div class="field">
-
-            <label for="telefono">
-              Número de teléfono *
-            </label>
+          <label class="choice">
 
             <input
-              id="telefono"
-              name="telefono"
-              type="tel"
-              autocomplete="tel"
-              required
+              type="radio"
+              name="estado_licencia"
+              value="No tengo licencia todavía"
             >
 
-          </div>
+            No tengo licencia todavía.
 
-
-          <div class="field full">
-
-            <label for="ubicacion">
-              Ciudad y estado donde vives actualmente *
-            </label>
-
-            <input
-              id="ubicacion"
-              name="ubicacion"
-              type="text"
-              placeholder="Ej. Miami, Florida"
-              required
-            >
-
-          </div>
+          </label>
 
         </div>
 
       </div>
 
 
-      <!-- 02 -->
+      <div class="question">
 
-      <div class="form-section">
-
-        <div class="form-number">
-          02 · ELEGIBILIDAD
+        <div class="question-title">
+          ¿Estás dispuesto/a a completar la capacitación
+          y el proceso de licenciamiento requerido? *
         </div>
 
-        <h3>
-          Información básica
-        </h3>
+        <div class="choices">
+
+          <label class="choice">
+
+            <input
+              type="radio"
+              name="dispuesto_licenciamiento"
+              value="Sí"
+              required
+            >
+
+            Sí
+
+          </label>
 
 
-        <div class="question">
+          <label class="choice">
 
-          <div class="question-title">
-            ¿Tienes 18 años de edad o más? *
-          </div>
+            <input
+              type="radio"
+              name="dispuesto_licenciamiento"
+              value="No"
+            >
 
-          <div class="choices">
+            No
 
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="mayor_de_18"
-                value="Sí"
-                required
-              >
-
-              Sí
-
-            </label>
-
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="mayor_de_18"
-                value="No"
-              >
-
-              No
-
-            </label>
-
-          </div>
-
-        </div>
-
-
-        <div class="question">
-
-          <div class="question-title">
-            ¿Eres elegible para trabajar legalmente
-            en los Estados Unidos? *
-          </div>
-
-          <div class="choices">
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="elegible_trabajo_usa"
-                value="Sí"
-                required
-              >
-
-              Sí
-
-            </label>
-
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="elegible_trabajo_usa"
-                value="No"
-              >
-
-              No
-
-            </label>
-
-          </div>
-
-        </div>
-
-
-        <div class="question">
-
-          <div class="question-title">
-            ¿Tienes un número de Seguro Social válido? *
-          </div>
-
-          <div class="choices">
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="ssn_valido"
-                value="Sí"
-                required
-              >
-
-              Sí
-
-            </label>
-
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="ssn_valido"
-                value="No"
-              >
-
-              No
-
-            </label>
-
-          </div>
-
-        </div>
-
-
-        <div class="question">
-
-          <div class="question-title">
-            ¿Estás dispuesto/a a completar una verificación
-            federal de antecedentes si es requerida? *
-          </div>
-
-          <div class="choices">
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="background_check"
-                value="Sí"
-                required
-              >
-
-              Sí
-
-            </label>
-
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="background_check"
-                value="No"
-              >
-
-              No
-
-            </label>
-
-          </div>
+          </label>
 
         </div>
 
       </div>
 
 
-      <!-- 03 -->
-
-      <div class="form-section">
-
-        <div class="form-number">
-          03 · LICENCIAMIENTO
-        </div>
-
-        <h3>
-          Experiencia y capacitación
-        </h3>
+    </div>
 
 
-        <div class="question">
+    <!-- 04 AVAILABILITY -->
 
-          <div class="question-title">
-            ¿Cuál describe mejor tu situación actual? *
-          </div>
+    <div class="form-section">
 
+      <div class="form-number">
+        04 · DISPONIBILIDAD
+      </div>
 
-          <div class="choices vertical">
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="licencia"
-                value="Actualmente tengo licencia"
-                required
-              >
-
-              Actualmente tengo licencia.
-
-            </label>
+      <h3>
+        ¿Qué estás buscando?
+      </h3>
 
 
-            <label class="choice">
+      <div class="question">
 
-              <input
-                type="radio"
-                name="licencia"
-                value="Actualmente estoy en proceso"
-              >
-
-              Actualmente estoy en proceso.
-
-            </label>
-
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="licencia"
-                value="No tengo licencia todavía"
-              >
-
-              No tengo licencia todavía.
-
-            </label>
-
-          </div>
-
+        <div class="question-title">
+          ¿Qué tipo de oportunidad te interesa? *
         </div>
 
 
-        <div class="question">
+        <div class="choices vertical">
 
-          <div class="question-title">
-            ¿Estás dispuesto/a a completar la capacitación
-            y el proceso de licenciamiento requerido? *
-          </div>
+          <label class="choice">
 
-          <div class="choices">
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="dispuesto_licenciamiento"
-                value="Sí"
-                required
-              >
-
-              Sí
-
-            </label>
-
-
-            <label class="choice">
-
-              <input
-                type="radio"
-                name="dispuesto_licenciamiento"
-                value="No"
-              >
-
-   
+            <input
+              type="radio"
+              name="tipo_oportunidad"
+              value="Medio tiempo"
+       
