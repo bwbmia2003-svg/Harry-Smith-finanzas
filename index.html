@@ -7,146 +7,491 @@
 <title>Team Victorioso</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#020a13;color:white;line-height:1.6}
-a{text-decoration:none}
-.container{width:min(1050px,92%);margin:auto}
-
-nav{background:#020d18;border-bottom:1px solid #18334c}
-.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:20px;font-weight:900}
-.logo span{color:#29a0ff}
-.nav a,.btn{
-background:linear-gradient(135deg,#f3d58c,#dcae55);
-color:#07111c;padding:12px 18px;border-radius:9px;font-weight:900
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#020a13;
+  color:white;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+}
+
+.container{
+  width:min(1050px,92%);
+  margin:auto;
+}
+
+/* NAV */
+
+nav{
+  background:#020d18;
+  border-bottom:1px solid #18334c;
+}
+
+.nav{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:900;
+}
+
+.logo span{
+  color:#29a0ff;
+}
+
+.nav a,
+.btn{
+  background:linear-gradient(135deg,#f3d58c,#dcae55);
+  color:#07111c;
+  padding:12px 18px;
+  border-radius:9px;
+  font-weight:900;
+}
+
+/* HERO */
 
 .hero{
-padding:55px 0;
-background:linear-gradient(135deg,#020b14,#062440)
+  padding:55px 0;
+  background:linear-gradient(135deg,#020b14,#062440);
 }
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.hero h1{font-size:clamp(45px,7vw,78px);line-height:.95}
-.hero h1 span{color:#29a0ff}
-.hero p{color:#bdcede;margin:23px 0 27px;max-width:580px}
-.photo{background:#07192c;padding:9px;border-radius:20px}
-.photo img{width:100%;display:block;border-radius:14px}
 
-.section{padding:65px 0}
-.label{color:#f3d58c;font-size:12px;font-weight:900;letter-spacing:.15em}
-.title{font-size:clamp(32px,5vw,52px);line-height:1.05;margin-top:7px}
-.title span{color:#29a0ff}
-.copy{color:#9fb4c9;margin-top:15px;max-width:700px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
 
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}
-.card{background:#071d33;border:1px solid #173651;border-radius:15px;padding:24px}
-.card p{color:#9fb4c9;font-size:14px;margin-top:7px}
+.hero h1{
+  font-size:clamp(45px,7vw,78px);
+  line-height:.95;
+}
 
-.requirements{background:linear-gradient(135deg,#07315c,#03182c)}
-.req-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.req-list{display:grid;gap:10px}
-.req{padding:14px;background:#ffffff0b;border:1px solid #ffffff17;border-radius:10px}
-.req b{color:#f3d58c}
+.hero h1 span{
+  color:#29a0ff;
+}
+
+.hero p{
+  color:#bdcede;
+  margin:23px 0 27px;
+  max-width:580px;
+}
+
+.photo{
+  background:#07192c;
+  padding:9px;
+  border-radius:20px;
+}
+
+.photo img{
+  width:100%;
+  display:block;
+  border-radius:14px;
+}
+
+/* GENERAL */
+
+.section{
+  padding:65px 0;
+}
+
+.label{
+  color:#f3d58c;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.15em;
+}
+
+.title{
+  font-size:clamp(32px,5vw,52px);
+  line-height:1.05;
+  margin-top:7px;
+}
+
+.title span{
+  color:#29a0ff;
+}
+
+.copy{
+  color:#9fb4c9;
+  margin-top:15px;
+  max-width:700px;
+}
+
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:30px;
+}
+
+.card{
+  background:#071d33;
+  border:1px solid #173651;
+  border-radius:15px;
+  padding:24px;
+}
+
+.card p{
+  color:#9fb4c9;
+  font-size:14px;
+  margin-top:7px;
+}
+
+/* REQUIREMENTS */
+
+.requirements{
+  background:linear-gradient(135deg,#07315c,#03182c);
+}
+
+.req-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.req-list{
+  display:grid;
+  gap:10px;
+}
+
+.req{
+  padding:14px;
+  background:#ffffff0b;
+  border:1px solid #ffffff17;
+  border-radius:10px;
+}
+
+.req b{
+  color:#f3d58c;
+}
+
+/* CONTACT */
 
 .contact-box{
-background:#07192d;border:1px solid #173651;border-radius:18px;
-padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:25px
+  background:#07192d;
+  border:1px solid #173651;
+  border-radius:18px;
+  padding:30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
 }
-.contact-info{color:#a9bdd1}
-.contact-info strong,.contact-info a{color:white}
 
-.application{background:#f4f7fb;color:#071321;padding:65px 0}
-.application-head{text-align:center;max-width:700px;margin:0 auto 30px}
-.application-head .label{color:#a87926}
-.application-head p{color:#647589;margin-top:10px}
+.contact-info{
+  color:#a9bdd1;
+}
 
-form{max-width:820px;margin:auto;display:grid;gap:18px}
+.contact-info strong,
+.contact-info a{
+  color:white;
+}
+
+/* APPLICATION */
+
+.application{
+  background:#f4f7fb;
+  color:#071321;
+  padding:65px 0;
+}
+
+.application-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 30px;
+}
+
+.application-head .label{
+  color:#a87926;
+}
+
+.application-head p{
+  color:#647589;
+  margin-top:10px;
+}
+
+form{
+  max-width:820px;
+  margin:auto;
+  display:grid;
+  gap:18px;
+}
+
 .form-card{
-background:white;border:1px solid #dfe6ed;border-radius:16px;
-padding:27px;box-shadow:0 10px 30px #09203912
+  background:white;
+  border:1px solid #dfe6ed;
+  border-radius:16px;
+  padding:27px;
+  box-shadow:0 10px 30px #09203912;
 }
-.form-card h3{font-size:22px;margin-bottom:18px}
-.form-num{color:#ac7c2a;font-size:11px;font-weight:900;letter-spacing:.14em}
 
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field{display:flex;flex-direction:column;gap:6px}
-.full{grid-column:1/-1}
-
-label,.question{font-weight:700}
-input[type=text],input[type=email],input[type=tel],textarea{
-width:100%;padding:13px;border:1px solid #cbd6e0;
-border-radius:9px;background:#f9fbfd;color:#071321;font:inherit
+.form-card h3{
+  font-size:22px;
+  margin-bottom:18px;
 }
-textarea{resize:vertical}
 
-.question{padding:16px 0;border-bottom:1px solid #e4eaf0}
-.question:last-child{border-bottom:0}
-.options{display:flex;gap:9px;flex-wrap:wrap;margin-top:10px}
+.form-num{
+  color:#ac7c2a;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+label,
+.question{
+  font-weight:700;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #cbd6e0;
+  border-radius:9px;
+  background:#f9fbfd;
+  color:#071321;
+  font:inherit;
+}
+
+textarea{
+  resize:vertical;
+}
+
+.question{
+  padding:16px 0;
+  border-bottom:1px solid #e4eaf0;
+}
+
+.question:last-child{
+  border-bottom:0;
+}
+
+.options{
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
 .option{
-display:flex;align-items:center;gap:8px;background:#f8fafc;
-border:1px solid #d3dde7;padding:10px 13px;border-radius:9px;font-weight:400
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#f8fafc;
+  border:1px solid #d3dde7;
+  padding:10px 13px;
+  border-radius:9px;
+  font-weight:400;
 }
-.option input{accent-color:#0a74da}
+
+.option input{
+  accent-color:#0a74da;
+}
+
+/* SUBMISSION */
 
 .submit-card{
-background:linear-gradient(135deg,#04182d,#09345d);
-color:white;border-radius:18px;padding:30px
+  background:linear-gradient(135deg,#04182d,#09345d);
+  color:white;
+  border-radius:18px;
+  padding:30px;
 }
-.submit-card .label{color:#f3d58c}
-.submit-card p{color:#b7c9da}
+
+.submit-card .label{
+  color:#f3d58c;
+}
+
+.submit-card h3{
+  font-size:25px;
+  margin:8px 0;
+}
+
+.submit-card p{
+  color:#b7c9da;
+}
 
 .agree{
-display:flex;gap:10px;align-items:flex-start;
-padding:15px;background:#ffffff0b;border:1px solid #ffffff18;
-border-radius:10px;margin-top:18px;font-size:14px;font-weight:400
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:15px;
+  background:#ffffff0b;
+  border:1px solid #ffffff18;
+  border-radius:10px;
+  margin-top:18px;
+  font-size:14px;
+  font-weight:400;
 }
-.agree input{width:18px;height:18px;margin-top:2px;accent-color:#dcae55}
+
+.agree input{
+  width:18px;
+  height:18px;
+  min-width:18px;
+  margin-top:2px;
+  accent-color:#dcae55;
+}
 
 .submit-btn{
-width:100%;margin-top:20px;padding:18px;border:0;border-radius:10px;
-background:linear-gradient(135deg,#f3d58c,#dcae55);
-font-weight:900;font-size:16px;color:#07111c;cursor:pointer
+  display:block;
+  width:100%;
+  margin-top:20px;
+  padding:19px;
+  border:0;
+  border-radius:10px;
+  background:linear-gradient(135deg,#f3d58c,#dcae55);
+  font-weight:900;
+  font-size:16px;
+  color:#07111c;
+  cursor:pointer;
 }
 
-.status{display:none;margin-bottom:20px;padding:18px;border-radius:12px;text-align:center}
-.status.success{display:block;background:#e6f7ec;color:#176238}
-.status.error{display:block;background:#ffeded;color:#9d2626}
+.submit-btn:hover{
+  filter:brightness(1.05);
+}
 
-footer{padding:28px 0;background:#00050a;color:#72869a;font-size:13px}
-.footer{display:flex;justify-content:space-between;gap:20px}
+.privacy-note{
+  text-align:center;
+  color:#90a7ba;
+  font-size:12px;
+  margin-top:12px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:28px 0;
+  background:#00050a;
+  color:#72869a;
+  font-size:13px;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* MOBILE */
 
 @media(max-width:750px){
-.hero-grid,.req-grid,.contact-box,.grid{grid-template-columns:1fr}
-.cards{grid-template-columns:1fr}
-.full{grid-column:auto}
+
+  .hero-grid,
+  .req-grid,
+  .contact-box,
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .full{
+    grid-column:auto;
+  }
+
 }
+
 @media(max-width:520px){
-.hero h1{font-size:47px}
-.section,.application{padding:50px 0}
-.form-card,.submit-card{padding:21px 16px}
-.options{flex-direction:column}
-.option{width:100%}
-.footer{flex-direction:column}
+
+  .hero h1{
+    font-size:47px;
+  }
+
+  .section,
+  .application{
+    padding:50px 0;
+  }
+
+  .form-card,
+  .submit-card{
+    padding:21px 16px;
+  }
+
+  .options{
+    flex-direction:column;
+  }
+
+  .option{
+    width:100%;
+  }
+
+  .footer{
+    flex-direction:column;
+  }
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+
 <nav>
 <div class="container nav">
-<div class="logo">TEAM <span>VICTORIOSO</span></div>
-<a href="#solicitud">APLICAR</a>
+
+<div class="logo">
+TEAM <span>VICTORIOSO</span>
+</div>
+
+<a href="#solicitud">
+APLICAR
+</a>
+
 </div>
 </nav>
 
 
+<!-- HERO -->
+
 <section class="hero">
+
 <div class="container hero-grid">
 
 <div>
-<div class="label">SERVICIOS FINANCIEROS</div>
+
+<div class="label">
+SERVICIOS FINANCIEROS
+</div>
 
 <h1>
 TU FUTURO.<br>
@@ -162,23 +507,33 @@ de servicios financieros.
 <a class="btn" href="#solicitud">
 COMPLETAR SOLICITUD
 </a>
+
 </div>
 
+
 <div class="photo">
+
 <img
 src="file_0000000011e881f6a9d4784f9cec6e41.png"
 alt="Team Victorioso"
 >
+
 </div>
 
 </div>
+
 </section>
 
 
+<!-- OPPORTUNITY -->
+
 <section class="section">
+
 <div class="container">
 
-<div class="label">LA OPORTUNIDAD</div>
+<div class="label">
+LA OPORTUNIDAD
+</div>
 
 <h2 class="title">
 APRENDE. CRECE.
@@ -191,34 +546,65 @@ No necesitas comenzar como experto en finanzas.
 Recibe capacitación mientras desarrollas nuevas habilidades.
 </p>
 
+
 <div class="cards">
 
 <div class="card">
-<h3>Flexibilidad</h3>
-<p>Opciones que pueden adaptarse a diferentes horarios y disponibilidad.</p>
+
+<h3>
+Flexibilidad
+</h3>
+
+<p>
+Opciones que pueden adaptarse a diferentes horarios y disponibilidad.
+</p>
+
 </div>
+
 
 <div class="card">
-<h3>Capacitación</h3>
-<p>Aprende sobre la industria y recibe orientación durante tu desarrollo.</p>
+
+<h3>
+Capacitación
+</h3>
+
+<p>
+Aprende sobre la industria y recibe orientación durante tu desarrollo.
+</p>
+
 </div>
+
 
 <div class="card">
-<h3>Crecimiento</h3>
-<p>Desarrolla liderazgo, comunicación y conocimiento financiero.</p>
-</div>
+
+<h3>
+Crecimiento
+</h3>
+
+<p>
+Desarrolla liderazgo, comunicación y conocimiento financiero.
+</p>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 
+<!-- REQUIREMENTS -->
+
 <section class="section requirements">
+
 <div class="container req-grid">
 
 <div>
-<div class="label">REQUISITOS</div>
+
+<div class="label">
+REQUISITOS
+</div>
 
 <h2 class="title">
 ¿LISTO PARA
@@ -229,35 +615,59 @@ Recibe capacitación mientras desarrollas nuevas habilidades.
 Algunas actividades dentro de servicios financieros requieren
 licenciamiento y verificación de antecedentes.
 </p>
+
 </div>
+
 
 <div class="req-list">
 
-<div class="req"><b>✓</b> Tener 18 años o más.</div>
+<div class="req">
+<b>✓</b> Tener 18 años o más.
+</div>
 
-<div class="req"><b>✓</b> Ser elegible para trabajar en Estados Unidos.</div>
+<div class="req">
+<b>✓</b> Ser elegible para trabajar en Estados Unidos.
+</div>
 
-<div class="req"><b>✓</b> Tener un número de Seguro Social válido.</div>
+<div class="req">
+<b>✓</b> Tener un número de Seguro Social válido.
+</div>
 
-<div class="req"><b>✓</b> Cumplir con la verificación de antecedentes.</div>
+<div class="req">
+<b>✓</b> Cumplir con la verificación de antecedentes.
+</div>
 
-<div class="req"><b>✓</b> Estar dispuesto a completar capacitación y licenciamiento.</div>
-
+<div class="req">
+<b>✓</b> Estar dispuesto a completar capacitación y licenciamiento.
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 
+<!-- CONTACT -->
+
 <section class="section">
+
 <div class="container">
 
 <div class="contact-box">
 
 <div>
-<div class="label">TU CONTACTO</div>
-<h2 class="title">HARRY <span>SMITH</span></h2>
+
+<div class="label">
+TU CONTACTO
 </div>
+
+<h2 class="title">
+HARRY <span>SMITH</span>
+</h2>
+
+</div>
+
 
 <div class="contact-info">
 
@@ -267,6 +677,7 @@ Hsmith@teamvictorioso
 <br><br>
 
 <strong>Teléfono</strong><br>
+
 <a href="tel:+19783906747">
 978-390-6747
 </a>
@@ -276,37 +687,45 @@ Hsmith@teamvictorioso
 </div>
 
 </div>
+
 </section>
 
 
+<!-- APPLICATION -->
+
 <section class="application" id="solicitud">
+
 <div class="container">
 
 <div class="application-head">
 
-<div class="label">TEAM VICTORIOSO</div>
+<div class="label">
+TEAM VICTORIOSO
+</div>
 
 <h2 class="title">
 SOLICITUD
 </h2>
 
 <p>
-Completa todas las preguntas para enviar tu información
-a Team Victorioso.
+Completa todas las preguntas y presiona el botón
+al final para enviar tu solicitud.
 </p>
 
 </div>
 
 
-<div id="status" class="status"></div>
-
+<!--
+IMPORTANT:
+NO JAVASCRIPT SUBMISSION.
+NETLIFY HANDLES THIS FORM DIRECTLY.
+-->
 
 <form
-id="applicationForm"
 name="team-victorioso"
 method="POST"
 data-netlify="true"
-netlify-honeypot="bot-field"
+data-netlify-honeypot="bot-field"
 >
 
 <input
@@ -315,15 +734,26 @@ name="form-name"
 value="team-victorioso"
 >
 
+
+<!-- SPAM FIELD -->
+
 <p style="display:none">
+
 <label>
-No completar
-<input name="bot-field">
+
+No completar:
+
+<input
+name="bot-field"
+type="text"
+>
+
 </label>
+
 </p>
 
 
-<!-- QUESTION 1 -->
+<!-- 01 -->
 
 <div class="form-card">
 
@@ -335,9 +765,11 @@ No completar
 Cuéntanos sobre ti
 </h3>
 
+
 <div class="grid">
 
 <div class="field full">
+
 <label for="nombre">
 Nombre completo *
 </label>
@@ -346,8 +778,10 @@ Nombre completo *
 id="nombre"
 name="nombre"
 type="text"
+autocomplete="name"
 required
 >
+
 </div>
 
 
@@ -361,6 +795,7 @@ Correo electrónico *
 id="email"
 name="email"
 type="email"
+autocomplete="email"
 required
 >
 
@@ -377,6 +812,7 @@ Número de teléfono *
 id="telefono"
 name="telefono"
 type="tel"
+autocomplete="tel"
 required
 >
 
@@ -399,10 +835,11 @@ required
 </div>
 
 </div>
+
 </div>
 
 
-<!-- QUESTION 2 -->
+<!-- 02 -->
 
 <div class="form-card">
 
@@ -422,22 +859,29 @@ Información básica
 <div class="options">
 
 <label class="option">
+
 <input
 type="radio"
 name="mayor_de_18"
 value="Sí"
 required
 >
+
 Sí
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="mayor_de_18"
 value="No"
 >
+
 No
+
 </label>
 
 </div>
@@ -452,22 +896,29 @@ No
 <div class="options">
 
 <label class="option">
+
 <input
 type="radio"
 name="elegible_usa"
 value="Sí"
 required
 >
+
 Sí
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="elegible_usa"
 value="No"
 >
+
 No
+
 </label>
 
 </div>
@@ -482,22 +933,29 @@ No
 <div class="options">
 
 <label class="option">
+
 <input
 type="radio"
 name="ssn_valido"
 value="Sí"
 required
 >
+
 Sí
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="ssn_valido"
 value="No"
 >
+
 No
+
 </label>
 
 </div>
@@ -513,22 +971,29 @@ federal de antecedentes si es requerida? *
 <div class="options">
 
 <label class="option">
+
 <input
 type="radio"
 name="antecedentes"
 value="Sí"
 required
 >
+
 Sí
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="antecedentes"
 value="No"
 >
+
 No
+
 </label>
 
 </div>
@@ -538,7 +1003,7 @@ No
 </div>
 
 
-<!-- QUESTION 3 -->
+<!-- 03 -->
 
 <div class="form-card">
 
@@ -558,31 +1023,42 @@ Experiencia y capacitación
 <div class="options">
 
 <label class="option">
+
 <input
 type="radio"
 name="licencia"
 value="Tengo licencia"
 required
 >
+
 Tengo licencia
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="licencia"
 value="Estoy en proceso"
 >
+
 Estoy en proceso
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="licencia"
 value="No tengo licencia"
 >
+
 No tengo licencia
+
 </label>
 
 </div>
@@ -598,22 +1074,29 @@ y licenciamiento requeridos? *
 <div class="options">
 
 <label class="option">
+
 <input
 type="radio"
 name="dispuesto_licencia"
 value="Sí"
 required
 >
+
 Sí
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="dispuesto_licencia"
 value="No"
 >
+
 No
+
 </label>
 
 </div>
@@ -623,7 +1106,7 @@ No
 </div>
 
 
-<!-- QUESTION 4 -->
+<!-- 04 -->
 
 <div class="form-card">
 
@@ -643,31 +1126,42 @@ No
 <div class="options">
 
 <label class="option">
+
 <input
 type="radio"
 name="tipo_oportunidad"
 value="Medio tiempo"
 required
 >
+
 Medio tiempo
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="tipo_oportunidad"
 value="Tiempo completo"
 >
+
 Tiempo completo
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="tipo_oportunidad"
 value="Ambas"
 >
+
 Ambas opciones
+
 </label>
 
 </div>
@@ -677,28 +1171,34 @@ Ambas opciones
 
 <div class="question">
 
-¿Estás cómodo/a trabajando de forma remota
-o híbrida? *
+¿Estás cómodo/a trabajando de forma remota o híbrida? *
 
 <div class="options">
 
 <label class="option">
+
 <input
 type="radio"
 name="remoto"
 value="Sí"
 required
 >
+
 Sí
+
 </label>
 
+
 <label class="option">
+
 <input
 type="radio"
 name="remoto"
 value="No"
 >
+
 No
+
 </label>
 
 </div>
@@ -708,7 +1208,7 @@ No
 </div>
 
 
-<!-- QUESTION 5 -->
+<!-- 05 -->
 
 <div class="form-card">
 
@@ -743,8 +1243,7 @@ required
 <div class="field">
 
 <label for="metas">
-¿Cuáles son tus principales metas profesionales
-o financieras? *
+¿Cuáles son tus principales metas profesionales o financieras? *
 </label>
 
 <textarea
@@ -790,7 +1289,7 @@ Envía tu solicitud a Team Victorioso
 </h3>
 
 <p>
-Revisa tus respuestas antes de enviar.
+Revisa tus respuestas y confirma que tu información sea correcta.
 </p>
 
 
@@ -814,11 +1313,16 @@ contratación, aceptación ni ingresos.
 
 <button
 type="submit"
-id="submitButton"
 class="submit-btn"
 >
 ENVIAR SOLICITUD A TEAM VICTORIOSO
 </button>
+
+
+<div class="privacy-note">
+Presiona una sola vez. Serás llevado a la confirmación
+cuando tu solicitud sea recibida.
+</div>
 
 </div>
 
@@ -826,8 +1330,11 @@ ENVIAR SOLICITUD A TEAM VICTORIOSO
 </form>
 
 </div>
+
 </section>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -844,72 +1351,6 @@ Harry Smith · 978-390-6747
 </div>
 
 </footer>
-
-
-<script>
-
-const form = document.getElementById("applicationForm");
-const button = document.getElementById("submitButton");
-const statusBox = document.getElementById("status");
-
-form.addEventListener("submit", async function(event){
-
-event.preventDefault();
-
-if(!form.checkValidity()){
-form.reportValidity();
-return;
-}
-
-button.disabled = true;
-button.textContent = "ENVIANDO...";
-
-const formData = new FormData(form);
-
-try{
-
-const response = await fetch("/",{
-method:"POST",
-headers:{
-"Content-Type":"application/x-www-form-urlencoded"
-},
-body:new URLSearchParams(formData).toString()
-});
-
-if(!response.ok){
-throw new Error("Error");
-}
-
-form.reset();
-
-statusBox.className="status success";
-statusBox.innerHTML=
-"<strong>¡Solicitud enviada correctamente!</strong><br>Gracias por tu interés en Team Victorioso. Hemos recibido tu información.";
-
-button.textContent="SOLICITUD ENVIADA";
-
-statusBox.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
-
-}
-
-catch(error){
-
-statusBox.className="status error";
-
-statusBox.innerHTML=
-"<strong>No se pudo enviar la solicitud.</strong><br>Inténtalo nuevamente.";
-
-button.disabled=false;
-button.textContent="ENVIAR SOLICITUD A TEAM VICTORIOSO";
-
-}
-
-});
-
-</script>
 
 </body>
 </html>
