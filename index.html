@@ -1,779 +1,860 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Team Victorioso | Servicios Financieros</title>
-
-  <meta
-    name="description"
-    content="Únete a Team Victorioso y explora una oportunidad profesional en servicios financieros."
-  >
-
-  <style>
-    :root{
-      --dark:#020912;
-      --navy:#04182d;
-      --navy2:#082848;
-      --blue:#0a74da;
-      --blue2:#29a0ff;
-      --gold:#dcae55;
-      --gold2:#f3d58c;
-      --white:#ffffff;
-      --muted:#a8bbcf;
-      --light:#f4f7fb;
-      --border:rgba(255,255,255,.12);
-    }
-
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:Arial,Helvetica,sans-serif;
-      background:var(--dark);
-      color:#fff;
-      line-height:1.6;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    a{
-      text-decoration:none;
-    }
-
-    button,
-    input,
-    textarea,
-    select{
-      font:inherit;
-    }
-
-    .container{
-      width:min(1100px,92%);
-      margin:auto;
-    }
-
-    .section-label{
-      color:var(--gold2);
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      margin-bottom:10px;
-    }
-
-    .title{
-      font-size:clamp(34px,5vw,58px);
-      line-height:1.02;
-      letter-spacing:-.04em;
-    }
-
-    .title span{
-      color:var(--blue2);
-    }
-
-    .intro{
-      color:var(--muted);
-      max-width:700px;
-      margin-top:16px;
-    }
-
-    .btn{
-      display:inline-block;
-      background:linear-gradient(135deg,var(--gold2),var(--gold));
-      color:#06111c;
-      padding:14px 23px;
-      border-radius:10px;
-      font-weight:900;
-      border:none;
-      cursor:pointer;
-    }
-
-    /* NAV */
-
-    nav{
-      background:#020d18;
-      border-bottom:1px solid var(--border);
-    }
-
-    .nav-inner{
-      min-height:72px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-    }
-
-    .logo{
-      font-size:18px;
-      font-weight:900;
-      letter-spacing:.05em;
-    }
-
-    .logo span{
-      color:var(--blue2);
-    }
-
-    .nav-btn{
-      background:linear-gradient(135deg,var(--gold2),var(--gold));
-      color:#07111c;
-      font-weight:900;
-      padding:10px 16px;
-      border-radius:9px;
-      font-size:13px;
-    }
-
-    /* HERO */
-
-    .hero{
-      padding:62px 0;
-      background:
-        radial-gradient(circle at 85% 20%,rgba(18,120,230,.28),transparent 35%),
-        linear-gradient(135deg,#020b14,#06223f);
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      align-items:center;
-    }
-
-    .tag{
-      display:inline-block;
-      color:var(--gold2);
-      border:1px solid rgba(226,180,92,.4);
-      background:rgba(226,180,92,.08);
-      padding:7px 13px;
-      border-radius:30px;
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:.14em;
-      margin-bottom:20px;
-    }
-
-    .hero h1{
-      font-size:clamp(46px,7vw,80px);
-      line-height:.93;
-      letter-spacing:-.055em;
-    }
-
-    .hero h1 span{
-      color:var(--blue2);
-    }
-
-    .hero p{
-      color:#c2d0df;
-      font-size:17px;
-      max-width:600px;
-      margin:24px 0 28px;
-    }
-
-    .photo{
-      padding:9px;
-      border-radius:22px;
-      background:#07192c;
-      border:1px solid var(--border);
-      box-shadow:0 25px 60px rgba(0,0,0,.45);
-    }
-
-    .photo img{
-      border-radius:15px;
-    }
-
-    /* INFO */
-
-    .info{
-      padding:75px 0;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-      margin-top:36px;
-    }
-
-    .card{
-      padding:25px;
-      border-radius:16px;
-      border:1px solid var(--border);
-      background:linear-gradient(145deg,#092846,#06172a);
-    }
-
-    .card h3{
-      margin-bottom:8px;
-      font-size:19px;
-    }
-
-    .card p{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    /* REQUIREMENTS */
-
-    .requirements{
-      padding:70px 0;
-      background:linear-gradient(135deg,#07315c,#03182c);
-    }
-
-    .req-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      align-items:center;
-    }
-
-    .req-list{
-      display:grid;
-      gap:11px;
-    }
-
-    .req{
-      background:rgba(255,255,255,.05);
-      border:1px solid var(--border);
-      padding:15px 17px;
-      border-radius:11px;
-    }
-
-    .req strong{
-      color:var(--gold2);
-      margin-right:8px;
-    }
-
-    /* CONTACT */
-
-    .contact{
-      padding:65px 0;
-    }
-
-    .contact-box{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:35px;
-      align-items:center;
-      background:#07192d;
-      border:1px solid var(--border);
-      border-radius:20px;
-      padding:34px;
-    }
-
-    .contact-details{
-      display:grid;
-      gap:15px;
-      color:var(--muted);
-    }
-
-    .contact-details strong,
-    .contact-details a{
-      color:white;
-    }
-
-    /* APPLICATION */
-
-    .application{
-      background:var(--light);
-      color:#071321;
-      padding:75px 0;
-    }
-
-    .application-header{
-      text-align:center;
-      max-width:760px;
-      margin:0 auto 38px;
-    }
-
-    .application .section-label{
-      color:#aa7c29;
-    }
-
-    .application-header h2{
-      font-size:clamp(35px,5vw,56px);
-      line-height:1;
-      letter-spacing:-.04em;
-    }
-
-    .application-header p{
-      color:#607184;
-      margin-top:14px;
-    }
-
-    .application-form{
-      max-width:850px;
-      margin:auto;
-      display:grid;
-      gap:20px;
-    }
-
-    .form-section{
-      background:white;
-      border-radius:18px;
-      padding:30px;
-      border:1px solid #e1e8ef;
-      box-shadow:0 12px 35px rgba(5,28,50,.08);
-    }
-
-    .form-number{
-      color:#b4842d;
-      font-size:11px;
-      font-weight:900;
-      letter-spacing:.18em;
-      margin-bottom:5px;
-    }
-
-    .form-section h3{
-      margin-bottom:22px;
-      font-size:24px;
-    }
-
-    .form-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:17px;
-    }
-
-    .field{
-      display:flex;
-      flex-direction:column;
-      gap:7px;
-    }
-
-    .full{
-      grid-column:1 / -1;
-    }
-
-    .field label,
-    .question-title{
-      font-weight:700;
-      color:#10243a;
-    }
-
-    .field input,
-    .field textarea,
-    .field select{
-      width:100%;
-      border:1px solid #cad5df;
-      border-radius:10px;
-      padding:13px 14px;
-      background:#f9fbfd;
-      color:#071321;
-      outline:none;
-    }
-
-    .field input:focus,
-    .field textarea:focus,
-    .field select:focus{
-      border-color:#148cf2;
-      box-shadow:0 0 0 3px rgba(20,140,242,.11);
-    }
-
-    textarea{
-      resize:vertical;
-    }
-
-    .question{
-      padding:18px 0;
-      border-bottom:1px solid #e8edf2;
-    }
-
-    .question:last-child{
-      border-bottom:none;
-      padding-bottom:0;
-    }
-
-    .choices{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:12px;
-    }
-
-    .choices.vertical{
-      flex-direction:column;
-    }
-
-    .choice{
-      display:flex;
-      align-items:center;
-      gap:9px;
-      border:1px solid #d4dde6;
-      border-radius:10px;
-      padding:11px 14px;
-      background:#f9fbfd;
-      cursor:pointer;
-    }
-
-    .choice input{
-      accent-color:#0875d8;
-    }
-
-    .final-section{
-      background:#061d35;
-      color:white;
-    }
-
-    .agreement{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-      color:#c8d5e3;
-      font-size:14px;
-    }
-
-    .agreement input{
-      margin-top:4px;
-      accent-color:var(--gold);
-    }
-
-    .submit-btn{
-      width:100%;
-      margin-top:24px;
-      padding:16px 20px;
-      background:linear-gradient(135deg,var(--gold2),var(--gold));
-      color:#06111c;
-      font-weight:900;
-      border:0;
-      border-radius:10px;
-      cursor:pointer;
-    }
-
-    .form-note{
-      text-align:center;
-      color:#8da1b5;
-      font-size:12px;
-      margin-top:11px;
-    }
-
-    /* FOOTER */
-
-    footer{
-      padding:30px 0;
-      background:#00060c;
-      border-top:1px solid var(--border);
-    }
-
-    .footer{
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      color:#74879b;
-      font-size:13px;
-    }
-
-    @media(max-width:800px){
-
-      .hero-grid,
-      .req-grid,
-      .contact-box{
-        grid-template-columns:1fr;
-      }
-
-      .cards{
-        grid-template-columns:1fr;
-      }
-
-      .form-grid{
-        grid-template-columns:1fr;
-      }
-
-      .full{
-        grid-column:auto;
-      }
-
-    }
-
-    @media(max-width:550px){
-
-      .hero{
-        padding:44px 0;
-      }
-
-      .hero h1{
-        font-size:48px;
-      }
-
-      .info,
-      .contact,
-      .application{
-        padding:55px 0;
-      }
-
-      .nav-btn{
-        font-size:11px;
-        padding:9px 11px;
-      }
-
-      .form-section{
-        padding:22px 17px;
-      }
-
-      .choices{
-        flex-direction:column;
-      }
-
-      .choice{
-        width:100%;
-      }
-
-      .btn{
-        width:100%;
-        text-align:center;
-      }
-
-      .footer{
-        flex-direction:column;
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Team Victorioso | Servicios Financieros</title>
+
+<meta
+  name="description"
+  content="Únete a Team Victorioso y explora una oportunidad profesional en servicios financieros."
+>
+
+<style>
+
+:root{
+  --dark:#020912;
+  --navy:#04182d;
+  --navy2:#082848;
+  --blue:#0a74da;
+  --blue2:#29a0ff;
+  --gold:#dcae55;
+  --gold2:#f3d58c;
+  --white:#ffffff;
+  --muted:#a8bbcf;
+  --light:#f4f7fb;
+  --border:rgba(255,255,255,.12);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--dark);
+  color:#fff;
+  line-height:1.6;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+.section-label{
+  color:var(--gold2);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.title{
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.02;
+  letter-spacing:-.04em;
+}
+
+.title span{
+  color:var(--blue2);
+}
+
+.intro{
+  color:var(--muted);
+  max-width:700px;
+  margin-top:16px;
+}
+
+.btn{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#06111c;
+  padding:14px 23px;
+  border-radius:10px;
+  font-weight:900;
+  border:none;
+  cursor:pointer;
+}
+
+
+/* NAV */
+
+nav{
+  background:#020d18;
+  border-bottom:1px solid var(--border);
+}
+
+.nav-inner{
+  min-height:72px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  font-size:18px;
+  font-weight:900;
+  letter-spacing:.05em;
+}
+
+.logo span{
+  color:var(--blue2);
+}
+
+.nav-btn{
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#07111c;
+  font-weight:900;
+  padding:10px 16px;
+  border-radius:9px;
+  font-size:13px;
+}
+
+
+/* HERO */
+
+.hero{
+  padding:62px 0;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(18,120,230,.28),transparent 35%),
+    linear-gradient(135deg,#020b14,#06223f);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.tag{
+  display:inline-block;
+  color:var(--gold2);
+  border:1px solid rgba(226,180,92,.4);
+  background:rgba(226,180,92,.08);
+  padding:7px 13px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(46px,7vw,80px);
+  line-height:.93;
+  letter-spacing:-.055em;
+}
+
+.hero h1 span{
+  color:var(--blue2);
+}
+
+.hero p{
+  color:#c2d0df;
+  font-size:17px;
+  max-width:600px;
+  margin:24px 0 28px;
+}
+
+.photo{
+  padding:9px;
+  border-radius:22px;
+  background:#07192c;
+  border:1px solid var(--border);
+  box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.photo img{
+  border-radius:15px;
+}
+
+
+/* OPPORTUNITY */
+
+.info{
+  padding:75px 0;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:36px;
+}
+
+.card{
+  padding:25px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background:linear-gradient(145deg,#092846,#06172a);
+}
+
+.card h3{
+  margin-bottom:8px;
+  font-size:19px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+
+/* REQUIREMENTS */
+
+.requirements{
+  padding:70px 0;
+  background:linear-gradient(135deg,#07315c,#03182c);
+}
+
+.req-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.req-list{
+  display:grid;
+  gap:11px;
+}
+
+.req{
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--border);
+  padding:15px 17px;
+  border-radius:11px;
+}
+
+.req strong{
+  color:var(--gold2);
+  margin-right:8px;
+}
+
+
+/* CONTACT */
+
+.contact{
+  padding:65px 0;
+}
+
+.contact-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
+  background:#07192d;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:34px;
+}
+
+.contact-details{
+  display:grid;
+  gap:15px;
+  color:var(--muted);
+}
+
+.contact-details strong,
+.contact-details a{
+  color:white;
+}
+
+
+/* APPLICATION */
+
+.application{
+  background:var(--light);
+  color:#071321;
+  padding:75px 0;
+}
+
+.application-header{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 38px;
+}
+
+.application .section-label{
+  color:#aa7c29;
+}
+
+.application-header h2{
+  font-size:clamp(35px,5vw,56px);
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+.application-header p{
+  color:#607184;
+  margin-top:14px;
+}
+
+.application-form{
+  max-width:850px;
+  margin:auto;
+  display:grid;
+  gap:20px;
+}
+
+.form-section{
+  background:white;
+  border-radius:18px;
+  padding:30px;
+  border:1px solid #e1e8ef;
+  box-shadow:0 12px 35px rgba(5,28,50,.08);
+}
+
+.form-number{
+  color:#b4842d;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+  margin-bottom:5px;
+}
+
+.form-section h3{
+  margin-bottom:22px;
+  font-size:24px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+.full{
+  grid-column:1 / -1;
+}
+
+.field label,
+.question-title{
+  font-weight:700;
+  color:#10243a;
+}
+
+.field input,
+.field textarea{
+  width:100%;
+  border:1px solid #cad5df;
+  border-radius:10px;
+  padding:13px 14px;
+  background:#f9fbfd;
+  color:#071321;
+  outline:none;
+}
+
+.field input:focus,
+.field textarea:focus{
+  border-color:#148cf2;
+  box-shadow:0 0 0 3px rgba(20,140,242,.11);
+}
+
+textarea{
+  resize:vertical;
+}
+
+.question{
+  padding:18px 0;
+  border-bottom:1px solid #e8edf2;
+}
+
+.question:last-child{
+  border-bottom:none;
+  padding-bottom:0;
+}
+
+.choices{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:12px;
+}
+
+.choices.vertical{
+  flex-direction:column;
+}
+
+.choice{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid #d4dde6;
+  border-radius:10px;
+  padding:11px 14px;
+  background:#f9fbfd;
+  cursor:pointer;
+}
+
+.choice input{
+  accent-color:#0875d8;
+}
+
+
+/* FINAL SUBMISSION */
+
+.submit-section{
+  background:
+    radial-gradient(circle at top right,rgba(41,160,255,.20),transparent 35%),
+    linear-gradient(135deg,#04182d,#082848);
+  color:white;
+  border-radius:20px;
+  padding:34px;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.submit-section h3{
+  font-size:27px;
+  margin-bottom:10px;
+}
+
+.submit-section > p{
+  color:#afc2d7;
+  margin-bottom:24px;
+}
+
+.agreement{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:12px;
+  padding:16px;
+  color:#d4dfeb;
+  font-size:14px;
+}
+
+.agreement input{
+  width:18px;
+  height:18px;
+  min-width:18px;
+  margin-top:2px;
+  accent-color:var(--gold);
+}
+
+.submit-btn{
+  width:100%;
+  margin-top:22px;
+  padding:18px 20px;
+  border:0;
+  border-radius:11px;
+  cursor:pointer;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#06111c;
+  font-size:16px;
+  font-weight:900;
+  letter-spacing:.04em;
+  box-shadow:0 10px 30px rgba(220,174,85,.22);
+}
+
+.submit-btn:active{
+  transform:scale(.99);
+}
+
+.submit-btn:disabled{
+  opacity:.7;
+  cursor:not-allowed;
+}
+
+.form-note{
+  text-align:center;
+  color:#8399af;
+  font-size:12px;
+  margin-top:12px;
+}
+
+
+/* SUCCESS MESSAGE */
+
+.success-message{
+  display:none;
+  max-width:850px;
+  margin:0 auto 25px;
+  background:#eaf8ef;
+  color:#135d34;
+  border:1px solid #b9e2c8;
+  border-radius:14px;
+  padding:22px;
+  text-align:center;
+}
+
+.success-message.show{
+  display:block;
+}
+
+.success-message strong{
+  display:block;
+  font-size:20px;
+  margin-bottom:5px;
+}
+
+
+/* FOOTER */
+
+footer{
+  padding:30px 0;
+  background:#00060c;
+  border-top:1px solid var(--border);
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#74879b;
+  font-size:13px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .hero-grid,
+  .req-grid,
+  .contact-box{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .full{
+    grid-column:auto;
+  }
+
+}
+
+@media(max-width:550px){
+
+  .hero{
+    padding:44px 0;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .info,
+  .contact,
+  .application{
+    padding:55px 0;
+  }
+
+  .nav-btn{
+    font-size:11px;
+    padding:9px 11px;
+  }
+
+  .form-section{
+    padding:22px 17px;
+  }
+
+  .submit-section{
+    padding:25px 18px;
+  }
+
+  .choices{
+    flex-direction:column;
+  }
+
+  .choice{
+    width:100%;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .footer{
+    flex-direction:column;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- NAV -->
 
-  <nav>
-    <div class="container nav-inner">
+<!-- NAV -->
 
-      <div class="logo">
-        TEAM <span>VICTORIOSO</span>
+<nav>
+
+  <div class="container nav-inner">
+
+    <div class="logo">
+      TEAM <span>VICTORIOSO</span>
+    </div>
+
+    <a class="nav-btn" href="#solicitud">
+      APLICAR
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="tag">
+        SERVICIOS FINANCIEROS
       </div>
 
-      <a class="nav-btn" href="#solicitud">
-        APLICAR
+      <h1>
+        TU FUTURO.<br>
+        <span>TUS TÉRMINOS.</span>
+      </h1>
+
+      <p>
+        Únete a Team Victorioso y descubre una oportunidad
+        profesional con flexibilidad, capacitación y desarrollo
+        dentro de la industria de servicios financieros.
+      </p>
+
+      <a class="btn" href="#solicitud">
+        COMPLETAR SOLICITUD
       </a>
 
     </div>
-  </nav>
 
 
-  <!-- HERO -->
+    <div class="photo">
 
-  <section class="hero">
+      <img
+        src="file_00000000875881f684bc1fa35f8fa650.png"
+        alt="Team Victorioso"
+      >
 
-    <div class="container hero-grid">
+    </div>
 
-      <div>
+  </div>
 
-        <div class="tag">
-          SERVICIOS FINANCIEROS
-        </div>
+</section>
 
-        <h1>
-          TU FUTURO.<br>
-          <span>TUS TÉRMINOS.</span>
-        </h1>
+
+<!-- OPPORTUNITY -->
+
+<section class="info">
+
+  <div class="container">
+
+    <div class="section-label">
+      LA OPORTUNIDAD
+    </div>
+
+    <h2 class="title">
+      APRENDE. CRECE.
+      <span>CONSTRUYE.</span>
+    </h2>
+
+    <p class="intro">
+      Buscamos personas motivadas y dispuestas a aprender.
+      No necesitas comenzar como experto en finanzas.
+      Puedes desarrollar nuevas habilidades mientras recibes
+      capacitación y orientación profesional.
+    </p>
+
+
+    <div class="cards">
+
+      <div class="card">
+
+        <h3>
+          Flexibilidad
+        </h3>
 
         <p>
-          Únete a Team Victorioso y descubre una oportunidad
-          profesional con flexibilidad, capacitación y desarrollo
-          dentro de la industria de servicios financieros.
+          Opciones que pueden adaptarse a distintos horarios
+          y niveles de disponibilidad.
         </p>
-
-        <a class="btn" href="#solicitud">
-          COMPLETAR SOLICITUD
-        </a>
 
       </div>
 
 
-      <div class="photo">
+      <div class="card">
 
-        <img
-          src="file_00000000875881f684bc1fa35f8fa650.png"
-          alt="Team Victorioso"
-        >
+        <h3>
+          Capacitación y licenciamiento
+        </h3>
+
+        <p>
+          Aprende sobre la industria y recibe orientación
+          durante el proceso profesional correspondiente.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Crecimiento e incentivos
+        </h3>
+
+        <p>
+          Desarrolla comunicación, liderazgo y educación
+          financiera con oportunidades basadas en desempeño.
+        </p>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- OPPORTUNITY -->
+<!-- REQUIREMENTS -->
 
-  <section class="info">
+<section class="requirements">
 
-    <div class="container">
+  <div class="container req-grid">
+
+    <div>
 
       <div class="section-label">
-        LA OPORTUNIDAD
+        REQUISITOS
       </div>
 
       <h2 class="title">
-        APRENDE. CRECE.
-        <span>CONSTRUYE.</span>
+        ¿LISTO PARA
+        <span>DAR EL PASO?</span>
       </h2>
 
       <p class="intro">
-        Buscamos personas motivadas y dispuestas a aprender.
-        No necesitas comenzar como experto en finanzas.
-        Puedes desarrollar nuevas habilidades mientras recibes
-        capacitación y orientación profesional.
+        Algunas actividades dentro de servicios financieros
+        requieren licencias, documentación y verificación
+        de antecedentes.
       </p>
 
-
-      <div class="cards">
-
-        <div class="card">
-
-          <h3>
-            Flexibilidad
-          </h3>
-
-          <p>
-            Opciones que pueden adaptarse a distintos horarios
-            y niveles de disponibilidad.
-          </p>
-
-        </div>
+    </div>
 
 
-        <div class="card">
+    <div class="req-list">
 
-          <h3>
-            Capacitación y licenciamiento
-          </h3>
+      <div class="req">
+        <strong>✓</strong>
+        Tener 18 años o más.
+      </div>
 
-          <p>
-            Aprende sobre la industria y recibe orientación
-            durante el proceso profesional correspondiente.
-          </p>
+      <div class="req">
+        <strong>✓</strong>
+        Ser elegible para trabajar en los Estados Unidos.
+      </div>
 
-        </div>
+      <div class="req">
+        <strong>✓</strong>
+        Tener un número de Seguro Social válido.
+      </div>
 
+      <div class="req">
+        <strong>✓</strong>
+        Cumplir con los requisitos de verificación de antecedentes.
+      </div>
 
-        <div class="card">
-
-          <h3>
-            Crecimiento e incentivos
-          </h3>
-
-          <p>
-            Desarrolla comunicación, liderazgo y educación
-            financiera con oportunidades basadas en desempeño.
-          </p>
-
-        </div>
-
+      <div class="req">
+        <strong>✓</strong>
+        Estar dispuesto a completar capacitación y licenciamiento.
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- REQUIREMENTS -->
+<!-- CONTACT -->
 
-  <section class="requirements">
+<section class="contact">
 
-    <div class="container req-grid">
+  <div class="container">
+
+    <div class="contact-box">
 
       <div>
 
         <div class="section-label">
-          REQUISITOS
+          TU CONTACTO
         </div>
 
         <h2 class="title">
-          ¿LISTO PARA
-          <span>DAR EL PASO?</span>
+          HARRY
+          <span>SMITH</span>
         </h2>
 
-        <p class="intro">
-          Algunas actividades dentro de servicios financieros
-          requieren licencias, documentación y verificación
-          de antecedentes.
-        </p>
-
       </div>
 
 
-      <div class="req-list">
-
-        <div class="req">
-          <strong>✓</strong>
-          Tener 18 años o más.
-        </div>
-
-        <div class="req">
-          <strong>✓</strong>
-          Ser elegible para trabajar en los Estados Unidos.
-        </div>
-
-        <div class="req">
-          <strong>✓</strong>
-          Tener un número de Seguro Social válido.
-        </div>
-
-        <div class="req">
-          <strong>✓</strong>
-          Cumplir con los requisitos de verificación de antecedentes.
-        </div>
-
-        <div class="req">
-          <strong>✓</strong>
-          Estar dispuesto a completar capacitación y licenciamiento.
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section class="contact">
-
-    <div class="container">
-
-      <div class="contact-box">
+      <div class="contact-details">
 
         <div>
 
-          <div class="section-label">
-            TU CONTACTO
-          </div>
+          <strong>Correo electrónico</strong><br>
 
-          <h2 class="title">
-            HARRY
-            <span>SMITH</span>
-          </h2>
+          Hsmith@teamvictorioso
 
         </div>
 
 
-        <div class="contact-details">
+        <div>
 
-          <div>
-            <strong>Correo electrónico</strong><br>
-            Hsmith@teamvictorioso
-          </div>
+          <strong>Teléfono</strong><br>
 
-          <div>
-            <strong>Teléfono</strong><br>
-
-            <a href="tel:+19783906747">
-              978-390-6747
-            </a>
-
-          </div>
+          <a href="tel:+19783906747">
+            978-390-6747
+          </a>
 
         </div>
 
@@ -781,319 +862,441 @@
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- APPLICATION -->
+<!-- APPLICATION -->
 
-  <section class="application" id="solicitud">
+<section class="application" id="solicitud">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="application-header">
+    <div class="application-header">
 
-        <div class="section-label">
-          SOLICITUD
+      <div class="section-label">
+        SOLICITUD
+      </div>
+
+      <h2>
+        DA EL SIGUIENTE PASO.
+      </h2>
+
+      <p>
+        Completa la solicitud para que Team Victorioso pueda
+        conocer más sobre ti, tus metas y tu disponibilidad.
+      </p>
+
+    </div>
+
+
+    <!-- SUCCESS MESSAGE -->
+
+    <div
+      class="success-message"
+      id="successMessage"
+    >
+
+      <strong>
+        ¡Solicitud enviada!
+      </strong>
+
+      Gracias por tu interés en Team Victorioso.
+      Tu información fue enviada correctamente.
+
+    </div>
+
+
+    <!-- NETLIFY FORM -->
+
+    <form
+      class="application-form"
+      id="applicationForm"
+      name="team-victorioso-application"
+      method="POST"
+      action="/?success=true#solicitud"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+
+      <input
+        type="hidden"
+        name="form-name"
+        value="team-victorioso-application"
+      >
+
+
+      <!-- BOT FIELD -->
+
+      <p style="display:none;">
+
+        <label>
+
+          No completar
+
+          <input name="bot-field">
+
+        </label>
+
+      </p>
+
+
+      <!-- 01 -->
+
+      <div class="form-section">
+
+        <div class="form-number">
+          01 · INFORMACIÓN PERSONAL
         </div>
 
-        <h2>
-          DA EL SIGUIENTE PASO.
-        </h2>
+        <h3>
+          Cuéntanos sobre ti
+        </h3>
 
-        <p>
-          Completa la solicitud para que Team Victorioso pueda
-          conocer más sobre ti, tus metas y tu disponibilidad.
-        </p>
+
+        <div class="form-grid">
+
+          <div class="field full">
+
+            <label for="nombre">
+              Nombre completo *
+            </label>
+
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="email">
+              Correo electrónico *
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="telefono">
+              Número de teléfono *
+            </label>
+
+            <input
+              id="telefono"
+              name="telefono"
+              type="tel"
+              autocomplete="tel"
+              required
+            >
+
+          </div>
+
+
+          <div class="field full">
+
+            <label for="ubicacion">
+              Ciudad y estado donde vives actualmente *
+            </label>
+
+            <input
+              id="ubicacion"
+              name="ubicacion"
+              type="text"
+              placeholder="Ej. Miami, Florida"
+              required
+            >
+
+          </div>
+
+        </div>
 
       </div>
 
 
-      <form
-        class="application-form"
-        name="team-victorioso-application"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-      >
+      <!-- 02 -->
 
-        <input
-          type="hidden"
-          name="form-name"
-          value="team-victorioso-application"
-        >
+      <div class="form-section">
 
-        <p style="display:none;">
-          <label>
-            No completar
-            <input name="bot-field">
-          </label>
-        </p>
+        <div class="form-number">
+          02 · ELEGIBILIDAD
+        </div>
+
+        <h3>
+          Información básica
+        </h3>
 
 
-        <!-- 01 PERSONAL -->
+        <div class="question">
 
-        <div class="form-section">
-
-          <div class="form-number">
-            01 · INFORMACIÓN PERSONAL
+          <div class="question-title">
+            ¿Tienes 18 años de edad o más? *
           </div>
 
-          <h3>
-            Cuéntanos sobre ti
-          </h3>
+          <div class="choices">
 
-
-          <div class="form-grid">
-
-            <div class="field full">
-
-              <label for="nombre">
-                Nombre completo *
-              </label>
+            <label class="choice">
 
               <input
-                id="nombre"
-                name="Nombre completo"
-                type="text"
+                type="radio"
+                name="mayor_de_18"
+                value="Sí"
                 required
               >
 
-            </div>
+              Sí
+
+            </label>
 
 
-            <div class="field">
-
-              <label for="email">
-                Correo electrónico *
-              </label>
+            <label class="choice">
 
               <input
-                id="email"
-                name="Correo electrónico"
-                type="email"
-                required
+                type="radio"
+                name="mayor_de_18"
+                value="No"
               >
 
-            </div>
+              No
 
-
-            <div class="field">
-
-              <label for="telefono">
-                Número de teléfono *
-              </label>
-
-              <input
-                id="telefono"
-                name="Número de teléfono"
-                type="tel"
-                required
-              >
-
-            </div>
-
-
-            <div class="field full">
-
-              <label for="ubicacion">
-                Ciudad y estado donde vives actualmente *
-              </label>
-
-              <input
-                id="ubicacion"
-                name="Ciudad y estado"
-                type="text"
-                placeholder="Ej. Miami, Florida"
-                required
-              >
-
-            </div>
+            </label>
 
           </div>
 
         </div>
 
 
-        <!-- 02 ELIGIBILITY -->
+        <div class="question">
 
-        <div class="form-section">
-
-          <div class="form-number">
-            02 · ELEGIBILIDAD
+          <div class="question-title">
+            ¿Eres elegible para trabajar legalmente
+            en los Estados Unidos? *
           </div>
 
-          <h3>
-            Información básica
-          </h3>
+          <div class="choices">
+
+            <label class="choice">
+
+              <input
+                type="radio"
+                name="elegible_trabajo_usa"
+                value="Sí"
+                required
+              >
+
+              Sí
+
+            </label>
 
 
-          <div class="question">
+            <label class="choice">
 
-            <div class="question-title">
-              ¿Tienes 18 años de edad o más? *
-            </div>
+              <input
+                type="radio"
+                name="elegible_trabajo_usa"
+                value="No"
+              >
 
-            <div class="choices">
+              No
 
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="Mayor de 18"
-                  value="Sí"
-                  required
-                >
-                Sí
-              </label>
-
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="Mayor de 18"
-                  value="No"
-                >
-                No
-              </label>
-
-            </div>
-
-          </div>
-
-
-          <div class="question">
-
-            <div class="question-title">
-              ¿Eres elegible para trabajar legalmente
-              en los Estados Unidos? *
-            </div>
-
-            <div class="choices">
-
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="Elegible para trabajar en EE.UU."
-                  value="Sí"
-                  required
-                >
-                Sí
-              </label>
-
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="Elegible para trabajar en EE.UU."
-                  value="No"
-                >
-                No
-              </label>
-
-            </div>
-
-          </div>
-
-
-          <div class="question">
-
-            <div class="question-title">
-              ¿Tienes un número de Seguro Social válido? *
-            </div>
-
-            <div class="choices">
-
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="SSN válido"
-                  value="Sí"
-                  required
-                >
-                Sí
-              </label>
-
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="SSN válido"
-                  value="No"
-                >
-                No
-              </label>
-
-            </div>
-
-          </div>
-
-
-          <div class="question">
-
-            <div class="question-title">
-              ¿Estás dispuesto/a a completar una verificación
-              federal de antecedentes si es requerida? *
-            </div>
-
-            <div class="choices">
-
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="Verificación de antecedentes"
-                  value="Sí"
-                  required
-                >
-                Sí
-              </label>
-
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="Verificación de antecedentes"
-                  value="No"
-                >
-                No
-              </label>
-
-            </div>
+            </label>
 
           </div>
 
         </div>
 
 
-        <!-- 03 LICENSE -->
+        <div class="question">
 
-        <div class="form-section">
-
-          <div class="form-number">
-            03 · LICENCIAMIENTO
+          <div class="question-title">
+            ¿Tienes un número de Seguro Social válido? *
           </div>
 
-          <h3>
-            Experiencia y capacitación
-          </h3>
+          <div class="choices">
+
+            <label class="choice">
+
+              <input
+                type="radio"
+                name="ssn_valido"
+                value="Sí"
+                required
+              >
+
+              Sí
+
+            </label>
 
 
-          <div class="question">
+            <label class="choice">
 
-            <div class="question-title">
-              ¿Cuál describe mejor tu situación actual? *
-            </div>
+              <input
+                type="radio"
+                name="ssn_valido"
+                value="No"
+              >
 
-            <div class="choices vertical">
+              No
 
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="Estado de licencia"
-                  value="Actualmente tengo licencia"
-                  required
-                >
-                Actualmente tengo licencia.
-              </label>
+            </label>
 
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="Estado de licencia"
-                  value="Estoy en proceso"
-                >
-                Actualmente est
+          </div>
+
+        </div>
+
+
+        <div class="question">
+
+          <div class="question-title">
+            ¿Estás dispuesto/a a completar una verificación
+            federal de antecedentes si es requerida? *
+          </div>
+
+          <div class="choices">
+
+            <label class="choice">
+
+              <input
+                type="radio"
+                name="background_check"
+                value="Sí"
+                required
+              >
+
+              Sí
+
+            </label>
+
+
+            <label class="choice">
+
+              <input
+                type="radio"
+                name="background_check"
+                value="No"
+              >
+
+              No
+
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- 03 -->
+
+      <div class="form-section">
+
+        <div class="form-number">
+          03 · LICENCIAMIENTO
+        </div>
+
+        <h3>
+          Experiencia y capacitación
+        </h3>
+
+
+        <div class="question">
+
+          <div class="question-title">
+            ¿Cuál describe mejor tu situación actual? *
+          </div>
+
+
+          <div class="choices vertical">
+
+            <label class="choice">
+
+              <input
+                type="radio"
+                name="licencia"
+                value="Actualmente tengo licencia"
+                required
+              >
+
+              Actualmente tengo licencia.
+
+            </label>
+
+
+            <label class="choice">
+
+              <input
+                type="radio"
+                name="licencia"
+                value="Actualmente estoy en proceso"
+              >
+
+              Actualmente estoy en proceso.
+
+            </label>
+
+
+            <label class="choice">
+
+              <input
+                type="radio"
+                name="licencia"
+                value="No tengo licencia todavía"
+              >
+
+              No tengo licencia todavía.
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <div class="question">
+
+          <div class="question-title">
+            ¿Estás dispuesto/a a completar la capacitación
+            y el proceso de licenciamiento requerido? *
+          </div>
+
+          <div class="choices">
+
+            <label class="choice">
+
+              <input
+                type="radio"
+                name="dispuesto_licenciamiento"
+                value="Sí"
+                required
+              >
+
+              Sí
+
+            </label>
+
+
+            <label class="choice">
+
+              <input
+                type="radio"
+                name="dispuesto_licenciamiento"
+                value="No"
+              >
+
+   
