@@ -8,22 +8,21 @@
 
 <meta
   name="description"
-  content="Únete a Team Victorioso. Oportunidades profesionales, capacitación, flexibilidad y crecimiento dentro de la industria de servicios financieros."
+  content="Únete a Team Victorioso y explora una oportunidad profesional en servicios financieros."
 >
 
 <style>
 
 :root{
-  --navy:#03172c;
-  --navy2:#061f3b;
-  --blue:#0875d8;
-  --blue2:#15a0ff;
-  --gold:#e2b65b;
-  --gold2:#f3d58a;
-  --white:#ffffff;
-  --light:#edf5ff;
-  --muted:#a8bad0;
-  --dark:#010912;
+  --dark:#020912;
+  --navy:#04182d;
+  --navy2:#082848;
+  --blue:#0a74da;
+  --blue2:#28a0ff;
+  --gold:#e2b45c;
+  --gold2:#f2d187;
+  --white:#fff;
+  --muted:#a8bbcf;
   --border:rgba(255,255,255,.12);
 }
 
@@ -38,17 +37,15 @@ html{
 }
 
 body{
-  margin:0;
   font-family:Arial,Helvetica,sans-serif;
-  background:#010912;
-  color:#fff;
+  background:var(--dark);
+  color:white;
   line-height:1.6;
-  overflow-x:hidden;
 }
 
 img{
+  width:100%;
   display:block;
-  max-width:100%;
 }
 
 a{
@@ -56,7 +53,7 @@ a{
 }
 
 .container{
-  width:min(1150px,92%);
+  width:min(1100px,92%);
   margin:auto;
 }
 
@@ -64,74 +61,69 @@ a{
 /* NAV */
 
 nav{
-  width:100%;
-  background:#020d19;
+  background:#020d18;
   border-bottom:1px solid var(--border);
 }
 
-.nav-inner{
-  min-height:76px;
+.nav{
+  min-height:72px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
 }
 
 .logo{
-  color:#fff;
-  font-weight:900;
-  letter-spacing:.05em;
   font-size:18px;
+  font-weight:900;
+  letter-spacing:.04em;
 }
 
 .logo span{
   color:var(--blue2);
 }
 
-.nav-btn{
-  color:#06111d;
+.nav a{
   background:linear-gradient(135deg,var(--gold2),var(--gold));
-  padding:11px 18px;
+  color:#07111c;
+  font-weight:900;
+  padding:10px 17px;
   border-radius:9px;
-  font-weight:800;
 }
 
 
 /* HERO */
 
 .hero{
+  padding:65px 0;
   background:
-    radial-gradient(circle at 85% 20%,rgba(20,126,240,.28),transparent 35%),
-    linear-gradient(135deg,#020b14,#05213d 65%,#06172b);
-  padding:70px 0;
+    radial-gradient(circle at 85% 20%,rgba(18,120,230,.27),transparent 35%),
+    linear-gradient(135deg,#020b14,#06223f);
 }
 
 .hero-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:55px;
   align-items:center;
+  gap:50px;
 }
 
 .tag{
   display:inline-block;
-  border:1px solid rgba(226,182,91,.45);
   color:var(--gold2);
-  background:rgba(226,182,91,.08);
+  border:1px solid rgba(226,180,92,.4);
+  background:rgba(226,180,92,.08);
+  padding:7px 13px;
   border-radius:30px;
-  padding:8px 14px;
   font-size:12px;
-  font-weight:800;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-  margin-bottom:22px;
+  font-weight:900;
+  letter-spacing:.15em;
+  margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:clamp(45px,7vw,82px);
+  font-size:clamp(45px,7vw,78px);
   line-height:.95;
   letter-spacing:-.05em;
-  margin-bottom:25px;
 }
 
 .hero h1 span{
@@ -139,246 +131,84 @@ nav{
 }
 
 .hero p{
-  color:#c0cede;
-  font-size:18px;
-  max-width:610px;
-  margin-bottom:30px;
+  color:#c2d1df;
+  font-size:17px;
+  margin:25px 0 28px;
+  max-width:600px;
 }
 
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:13px;
-}
-
-.btn-primary,
-.btn-secondary{
+.btn{
   display:inline-block;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#06111c;
   padding:15px 23px;
   border-radius:10px;
   font-weight:900;
 }
 
-.btn-primary{
-  color:#06111d;
-  background:linear-gradient(135deg,var(--gold2),var(--gold));
-}
-
-.btn-secondary{
-  color:#fff;
-  border:1px solid rgba(255,255,255,.25);
-  background:rgba(255,255,255,.04);
-}
-
-
-/* IMAGE */
-
-.hero-photo{
-  background:#061629;
-  padding:10px;
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 25px 70px rgba(0,0,0,.45);
-}
-
-.hero-photo img{
-  width:100%;
-  border-radius:17px;
-}
-
-
-/* MINI BAR */
-
-.quick{
-  background:#06172a;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-}
-
-.quick-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-}
-
-.quick-item{
-  padding:27px 18px;
-  text-align:center;
-  border-right:1px solid var(--border);
-}
-
-.quick-item:last-child{
-  border-right:none;
-}
-
-.quick-item strong{
-  display:block;
-  color:#fff;
-  margin-bottom:3px;
-}
-
-.quick-item span{
-  color:var(--muted);
-  font-size:13px;
-}
-
-
-/* SECTIONS */
-
-section{
-  padding:90px 0;
-}
-
-.section-small{
-  color:var(--gold2);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-
-.section-title{
-  font-size:clamp(34px,5vw,60px);
-  line-height:1.04;
-  letter-spacing:-.04em;
-  max-width:820px;
-}
-
-.section-title span{
-  color:var(--blue2);
-}
-
-.section-copy{
-  color:var(--muted);
-  font-size:17px;
-  max-width:700px;
-  margin-top:20px;
-}
-
-
-/* CARDS */
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:45px;
-}
-
-.card{
-  background:linear-gradient(
-    145deg,
-    rgba(11,48,86,.78),
-    rgba(4,20,38,.95)
-  );
+.photo{
+  padding:9px;
+  background:#07192c;
   border:1px solid var(--border);
-  border-radius:18px;
-  padding:29px;
+  border-radius:22px;
+  box-shadow:0 25px 65px rgba(0,0,0,.45);
 }
 
-.card-number{
+.photo img{
+  border-radius:15px;
+}
+
+
+/* INFO */
+
+.info{
+  padding:75px 0;
+}
+
+.section-label{
   color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:.16em;
   font-size:12px;
-  letter-spacing:.15em;
   font-weight:900;
-  margin-bottom:20px;
-}
-
-.card h3{
-  font-size:21px;
   margin-bottom:10px;
 }
 
-.card p{
+.title{
+  font-size:clamp(33px,5vw,55px);
+  line-height:1.05;
+  letter-spacing:-.04em;
+}
+
+.title span{
+  color:var(--blue2);
+}
+
+.intro{
   color:var(--muted);
-  font-size:15px;
+  max-width:720px;
+  margin-top:17px;
 }
 
-
-/* FEATURE */
-
-.feature{
-  background:#05172a;
-}
-
-.feature-grid{
+.cards{
+  margin-top:38px;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:center;
-}
-
-.panel{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(14,102,196,.17),
-      rgba(255,255,255,.025)
-    );
-  border:1px solid rgba(40,149,255,.25);
-  border-radius:22px;
-  padding:35px;
-}
-
-.list{
-  display:grid;
-  gap:18px;
-}
-
-.list-item{
-  display:flex;
-  gap:14px;
-}
-
-.tick{
-  width:26px;
-  height:26px;
-  min-width:26px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#0a6ecb;
-  font-weight:900;
-}
-
-.list-item strong{
-  display:block;
-  margin-bottom:3px;
-}
-
-.list-item p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-
-/* STEPS */
-
-.steps{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:16px;
-  margin-top:45px;
 }
 
-.step{
-  border-top:3px solid var(--blue);
-  background:#07182b;
+.card{
+  background:linear-gradient(145deg,#092846,#06172a);
+  border:1px solid var(--border);
+  border-radius:16px;
   padding:25px;
 }
 
-.step-number{
-  color:var(--gold2);
-  font-size:31px;
-  font-weight:900;
+.card h3{
+  margin-bottom:8px;
 }
 
-.step h3{
-  margin:10px 0 8px;
-}
-
-.step p{
+.card p{
   color:var(--muted);
   font-size:14px;
 }
@@ -387,238 +217,169 @@ section{
 /* REQUIREMENTS */
 
 .requirements{
-  background:
-    linear-gradient(135deg,#06315e,#03182d 55%,#020c17);
+  background:linear-gradient(135deg,#07315c,#03182c);
+  padding:70px 0;
 }
 
 .req-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:60px;
+  gap:50px;
   align-items:center;
 }
 
 .req-list{
   display:grid;
-  gap:12px;
+  gap:11px;
 }
 
 .req{
-  display:flex;
-  gap:15px;
-  align-items:flex-start;
+  background:rgba(255,255,255,.05);
   border:1px solid var(--border);
-  background:rgba(255,255,255,.04);
-  border-radius:12px;
-  padding:17px;
+  padding:15px 17px;
+  border-radius:11px;
 }
 
-.req-icon{
+.req strong{
   color:var(--gold2);
-  font-weight:900;
-}
-
-
-/* CTA */
-
-.cta-box{
-  text-align:center;
-  border-radius:24px;
-  padding:65px 30px;
-  background:
-    radial-gradient(circle at top right,rgba(255,255,255,.12),transparent 30%),
-    linear-gradient(135deg,#0874d6,#074985,#041a31);
-}
-
-.cta-box h2{
-  font-size:clamp(35px,6vw,65px);
-  line-height:1;
-  max-width:850px;
-  margin:auto;
-}
-
-.cta-box p{
-  max-width:680px;
-  margin:22px auto 29px;
-  color:#d4e4f5;
+  margin-right:8px;
 }
 
 
 /* CONTACT */
 
 .contact{
-  background:#040f1c;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:45px;
+  padding:70px 0;
 }
 
 .contact-box{
+  background:#07192d;
   border:1px solid var(--border);
-  background:#07182b;
+  border-radius:20px;
+  padding:35px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.contact-details{
+  display:grid;
+  gap:9px;
+  color:var(--muted);
+}
+
+.contact-details strong{
+  color:white;
+}
+
+
+/* APPLICATION */
+
+.application{
+  padding:75px 0;
+  background:#f3f6fa;
+  color:#071321;
+}
+
+.application-header{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 35px;
+}
+
+.application .section-label{
+  color:#b28228;
+}
+
+.application h2{
+  font-size:clamp(35px,5vw,55px);
+  line-height:1.05;
+}
+
+.application p{
+  margin-top:13px;
+  color:#526274;
+}
+
+.form-frame{
+  background:white;
   border-radius:18px;
-  padding:30px;
+  overflow:hidden;
+  box-shadow:0 20px 55px rgba(0,0,0,.14);
 }
 
-.contact-box h3{
-  font-size:25px;
-  margin-bottom:18px;
-}
-
-.contact-line{
-  padding:14px 0;
-  border-bottom:1px solid var(--border);
-}
-
-.contact-line:last-child{
-  border-bottom:none;
-}
-
-.contact-line small{
+.form-frame iframe{
+  width:100%;
+  height:1750px;
+  border:0;
   display:block;
-  color:var(--gold2);
-  text-transform:uppercase;
-  font-size:10px;
-  letter-spacing:.14em;
-  margin-bottom:3px;
-}
-
-.contact-line strong{
-  color:white;
-}
-
-.phone{
-  color:white;
-}
-
-
-/* DISCLAIMER */
-
-.disclaimer{
-  padding:35px 0;
-  background:#020810;
-  border-top:1px solid var(--border);
-}
-
-.disclaimer p{
-  color:#71879e;
-  font-size:12px;
 }
 
 
 /* FOOTER */
 
 footer{
-  padding:38px 0;
-  background:#00050a;
+  background:#00060c;
+  border-top:1px solid var(--border);
+  padding:30px 0;
 }
 
-.footer-row{
+.footer{
   display:flex;
   justify-content:space-between;
-  gap:25px;
-  color:#74879b;
+  gap:20px;
+  color:#73869a;
   font-size:13px;
 }
 
 
 /* MOBILE */
 
-@media(max-width:850px){
+@media(max-width:800px){
 
   .hero-grid,
-  .feature-grid,
   .req-grid,
-  .contact-grid{
+  .contact-box{
     grid-template-columns:1fr;
   }
 
-  .hero{
-    padding:55px 0;
-  }
-
-  .hero-grid{
-    gap:35px;
-  }
-
   .cards{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .steps{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .quick-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .quick-item:nth-child(2){
-    border-right:none;
+    grid-template-columns:1fr;
   }
 
 }
 
-@media(max-width:560px){
-
-  .nav-inner{
-    min-height:68px;
-  }
-
-  .logo{
-    font-size:15px;
-  }
-
-  .nav-btn{
-    padding:9px 12px;
-    font-size:12px;
-  }
+@media(max-width:550px){
 
   .hero{
-    padding:42px 0 55px;
+    padding:45px 0;
   }
 
   .hero h1{
     font-size:48px;
   }
 
-  .hero p{
-    font-size:16px;
+  .info,
+  .contact,
+  .application{
+    padding:55px 0;
   }
 
-  .buttons{
-    flex-direction:column;
-  }
-
-  .btn-primary,
-  .btn-secondary{
+  .btn{
     width:100%;
     text-align:center;
   }
 
-  section{
-    padding:65px 0;
+  .form-frame{
+    border-radius:12px;
   }
 
-  .cards,
-  .steps,
-  .quick-grid{
-    grid-template-columns:1fr;
+  .form-frame iframe{
+    height:1900px;
   }
 
-  .quick-item{
-    border-right:none;
-    border-bottom:1px solid var(--border);
-  }
-
-  .quick-item:last-child{
-    border-bottom:none;
-  }
-
-  .footer-row{
+  .footer{
     flex-direction:column;
   }
 
@@ -627,79 +388,57 @@ footer{
 </style>
 </head>
 
-
 <body>
 
 
 <!-- NAV -->
 
 <nav>
-
-  <div class="container nav-inner">
+  <div class="container nav">
 
     <div class="logo">
       TEAM <span>VICTORIOSO</span>
     </div>
 
-    <a
-      class="nav-btn"
-      href="https://docs.google.com/forms/d/e/1FAIpQLSfD3EljZn41X9p-KjR8JZbVr9b1IEvwlljjiUKJWmIqfcTJIg/viewform"
-      target="_blank"
-    >
+    <a href="#solicitud">
       APLICAR
     </a>
 
   </div>
-
 </nav>
 
 
 <!-- HERO -->
 
-<header class="hero">
+<section class="hero">
 
   <div class="container hero-grid">
 
     <div>
 
       <div class="tag">
-        Servicios Financieros
+        SERVICIOS FINANCIEROS
       </div>
 
       <h1>
-        CONSTRUYE<br>
-        <span>TU FUTURO.</span>
+        TU FUTURO.<br>
+        <span>TUS TÉRMINOS.</span>
       </h1>
 
       <p>
-        Una oportunidad para personas motivadas que quieren
-        aprender, crecer profesionalmente y desarrollar nuevas
-        habilidades dentro de la industria de servicios financieros.
+        Únete a Team Victorioso y descubre una oportunidad
+        profesional con flexibilidad, capacitación y desarrollo
+        dentro de la industria de servicios financieros.
       </p>
 
-      <div class="buttons">
-
-        <a
-          class="btn-primary"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfD3EljZn41X9p-KjR8JZbVr9b1IEvwlljjiUKJWmIqfcTJIg/viewform"
-          target="_blank"
-        >
-          COMENZAR MI SOLICITUD
-        </a>
-
-        <a
-          class="btn-secondary"
-          href="#oportunidad"
-        >
-          CONOCER MÁS
-        </a>
-
-      </div>
+      <a class="btn" href="#solicitud">
+        COMPLETAR SOLICITUD
+      </a>
 
     </div>
 
 
-    <div class="hero-photo">
+    <div class="photo">
 
       <img
         src="file_00000000875881f684bc1fa35f8fa650.png"
@@ -710,354 +449,58 @@ footer{
 
   </div>
 
-</header>
-
-
-<!-- QUICK INFO -->
-
-<div class="quick">
-
-  <div class="container quick-grid">
-
-    <div class="quick-item">
-      <strong>Horario Flexible</strong>
-      <span>Construye alrededor de tu vida</span>
-    </div>
-
-    <div class="quick-item">
-      <strong>Capacitación</strong>
-      <span>Aprende mientras avanzas</span>
-    </div>
-
-    <div class="quick-item">
-      <strong>Crecimiento</strong>
-      <span>Desarrolla nuevas habilidades</span>
-    </div>
-
-    <div class="quick-item">
-      <strong>Comunidad</strong>
-      <span>Forma parte de un equipo</span>
-    </div>
-
-  </div>
-
-</div>
+</section>
 
 
 <!-- OPPORTUNITY -->
 
-<section id="oportunidad">
+<section class="info">
 
   <div class="container">
 
-    <div class="section-small">
-      La oportunidad
+    <div class="section-label">
+      LA OPORTUNIDAD
     </div>
 
-    <h2 class="section-title">
-      TU AMBICIÓN.<br>
-      <span>NUESTRA OPORTUNIDAD.</span>
+    <h2 class="title">
+      APRENDE. CRECE.
+      <span>CONSTRUYE.</span>
     </h2>
 
-    <p class="section-copy">
-      Team Victorioso busca personas responsables, motivadas
-      y dispuestas a aprender. La experiencia previa en servicios
-      financieros no es necesariamente requerida para comenzar.
-      Nuestro enfoque incluye capacitación, desarrollo y crecimiento
-      profesional.
+    <p class="intro">
+      Buscamos personas motivadas y dispuestas a aprender.
+      No necesitas comenzar como experto en finanzas.
+      Team Victorioso ofrece una oportunidad para desarrollar
+      nuevas habilidades, recibir capacitación y explorar
+      crecimiento dentro de la industria.
     </p>
 
 
     <div class="cards">
 
       <div class="card">
-
-        <div class="card-number">
-          01
-        </div>
-
         <h3>Flexibilidad</h3>
-
         <p>
-          Explora una oportunidad que pueda adaptarse a tu
-          horario y responsabilidades.
+          Opciones que pueden adaptarse a diferentes horarios
+          y niveles de disponibilidad.
         </p>
-
       </div>
-
 
       <div class="card">
-
-        <div class="card-number">
-          02
-        </div>
-
-        <h3>Capacitación</h3>
-
+        <h3>Capacitación y licenciamiento</h3>
         <p>
-          Aprende conceptos, procesos y habilidades relacionadas
-          con la industria financiera.
+          Aprende sobre la industria y recibe orientación
+          durante el proceso profesional correspondiente.
         </p>
-
       </div>
-
 
       <div class="card">
-
-        <div class="card-number">
-          03
-        </div>
-
-        <h3>Licenciamiento</h3>
-
+        <h3>Crecimiento e incentivos</h3>
         <p>
-          Recibe orientación sobre los pasos necesarios para
-          cumplir con los requisitos profesionales correspondientes.
+          Desarrolla habilidades de liderazgo, comunicación
+          y educación financiera con oportunidades basadas
+          en desempeño.
         </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-number">
-          04
-        </div>
-
-        <h3>Remoto e híbrido</h3>
-
-        <p>
-          Algunas oportunidades pueden permitir modalidades de
-          trabajo remoto, híbrido o desde oficina.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-number">
-          05
-        </div>
-
-        <h3>Desarrollo profesional</h3>
-
-        <p>
-          Fortalece tus habilidades de comunicación, liderazgo,
-          educación financiera y servicio.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-number">
-          06
-        </div>
-
-        <h3>Crecimiento</h3>
-
-        <p>
-          Desarrolla experiencia dentro de una comunidad enfocada
-          en metas, disciplina y progreso.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- WHY JOIN -->
-
-<section class="feature">
-
-  <div class="container feature-grid">
-
-    <div>
-
-      <div class="section-small">
-        ¿Por qué Team Victorioso?
-      </div>
-
-      <h2 class="section-title">
-        CRECE CON
-        <span>PROPÓSITO.</span>
-      </h2>
-
-      <p class="section-copy">
-        No necesitas tener todas las respuestas antes de comenzar.
-        Buscamos personas con disposición para aprender, trabajar
-        y desarrollar una nueva oportunidad profesional.
-      </p>
-
-    </div>
-
-
-    <div class="panel">
-
-      <div class="list">
-
-        <div class="list-item">
-
-          <div class="tick">✓</div>
-
-          <div>
-            <strong>Medio tiempo o tiempo completo</strong>
-            <p>
-              Explora opciones dependiendo de tu disponibilidad.
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="list-item">
-
-          <div class="tick">✓</div>
-
-          <div>
-            <strong>Capacitación y desarrollo</strong>
-            <p>
-              Aprende mientras desarrollas habilidades profesionales.
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="list-item">
-
-          <div class="tick">✓</div>
-
-          <div>
-            <strong>Oportunidades de liderazgo</strong>
-            <p>
-              Desarrolla comunicación, disciplina y liderazgo.
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="list-item">
-
-          <div class="tick">✓</div>
-
-          <div>
-            <strong>Incentivos</strong>
-            <p>
-              Pueden existir programas de incentivos y reconocimiento
-              para quienes cumplan los requisitos aplicables.
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="list-item">
-
-          <div class="tick">✓</div>
-
-          <div>
-            <strong>Viajes de compañía</strong>
-            <p>
-              Pueden existir oportunidades de viajes y experiencias
-              para participantes que califiquen.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PROCESS -->
-
-<section>
-
-  <div class="container">
-
-    <div class="section-small">
-      Cómo comenzar
-    </div>
-
-    <h2 class="section-title">
-      CUATRO PASOS.
-      <span>UNA DECISIÓN.</span>
-    </h2>
-
-
-    <div class="steps">
-
-      <div class="step">
-
-        <div class="step-number">
-          01
-        </div>
-
-        <h3>Completa el formulario</h3>
-
-        <p>
-          Envíanos tu información inicial y disponibilidad.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="step-number">
-          02
-        </div>
-
-        <h3>Revisión</h3>
-
-        <p>
-          El equipo revisará la información proporcionada.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="step-number">
-          03
-        </div>
-
-        <h3>Conecta con nosotros</h3>
-
-        <p>
-          Conoce más sobre la oportunidad y los próximos pasos.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="step-number">
-          04
-        </div>
-
-        <h3>Comienza</h3>
-
-        <p>
-          Si decides continuar, recibirás información sobre
-          capacitación y requisitos.
-        </p>
-
       </div>
 
     </div>
@@ -1075,18 +518,19 @@ footer{
 
     <div>
 
-      <div class="section-small">
-        Requisitos
+      <div class="section-label">
+        REQUISITOS
       </div>
 
-      <h2 class="section-title">
-        ¿ESTÁS LISTO PARA
+      <h2 class="title">
+        ¿LISTO PARA
         <span>DAR EL PASO?</span>
       </h2>
 
-      <p class="section-copy">
-        La industria financiera puede requerir licencias,
-        verificación de antecedentes y documentación válida.
+      <p class="intro">
+        Algunas actividades dentro de servicios financieros
+        requieren licencias, documentación y verificación
+        de antecedentes.
       </p>
 
     </div>
@@ -1095,77 +539,30 @@ footer{
     <div class="req-list">
 
       <div class="req">
-        <div class="req-icon">✓</div>
-        <div>Tener 18 años de edad o más.</div>
+        <strong>✓</strong>
+        Tener 18 años o más.
       </div>
 
       <div class="req">
-        <div class="req-icon">✓</div>
-        <div>
-          Ser elegible para trabajar legalmente en los Estados Unidos.
-        </div>
+        <strong>✓</strong>
+        Ser elegible para trabajar en los Estados Unidos.
       </div>
 
       <div class="req">
-        <div class="req-icon">✓</div>
-        <div>
-          Contar con la documentación necesaria para el proceso.
-        </div>
+        <strong>✓</strong>
+        Contar con un número de Seguro Social válido.
       </div>
 
       <div class="req">
-        <div class="req-icon">✓</div>
-        <div>
-          Estar dispuesto a completar los requisitos de
-          licenciamiento aplicables.
-        </div>
+        <strong>✓</strong>
+        Cumplir con la verificación federal de antecedentes.
       </div>
 
       <div class="req">
-        <div class="req-icon">✓</div>
-        <div>
-          Cumplir con los requisitos aplicables de verificación
-          de antecedentes.
-        </div>
+        <strong>✓</strong>
+        Estar dispuesto a completar los requisitos
+        de licenciamiento aplicables.
       </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section>
-
-  <div class="container">
-
-    <div class="cta-box">
-
-      <div class="section-small">
-        Tu próximo capítulo
-      </div>
-
-      <h2>
-        TU FUTURO.
-        TUS TÉRMINOS.
-      </h2>
-
-      <p>
-        Si estás buscando crecimiento, capacitación,
-        flexibilidad y una oportunidad para desarrollar
-        nuevas habilidades, queremos conocerte.
-      </p>
-
-      <a
-        class="btn-primary"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfD3EljZn41X9p-KjR8JZbVr9b1IEvwlljjiUKJWmIqfcTJIg/viewform"
-        target="_blank"
-      >
-        APLICAR AHORA
-      </a>
 
     </div>
 
@@ -1178,74 +575,40 @@ footer{
 
 <section class="contact">
 
-  <div class="container contact-grid">
-
-    <div>
-
-      <div class="section-small">
-        Contacto
-      </div>
-
-      <h2 class="section-title">
-        HABLEMOS DE
-        <span>TU FUTURO.</span>
-      </h2>
-
-      <p class="section-copy">
-        ¿Tienes preguntas antes de completar tu solicitud?
-        Comunícate con Team Victorioso.
-      </p>
-
-    </div>
-
+  <div class="container">
 
     <div class="contact-box">
 
-      <h3>
-        Harry Smith
-      </h3>
+      <div>
+
+        <div class="section-label">
+          TU CONTACTO
+        </div>
+
+        <h2 class="title">
+          HARRY
+          <span>SMITH</span>
+        </h2>
+
+      </div>
 
 
-      <div class="contact-line">
+      <div class="contact-details">
 
-        <small>
-          Correo
-        </small>
-
-        <strong>
+        <div>
+          <strong>Correo:</strong><br>
           Hsmith@teamvictorioso
-        </strong>
+        </div>
 
-      </div>
-
-
-      <div class="contact-line">
-
-        <small>
-          Teléfono
-        </small>
-
-        <a
-          class="phone"
-          href="tel:+19783906747"
-        >
-          <strong>
+        <div>
+          <strong>Teléfono:</strong><br>
+          <a
+            href="tel:+19783906747"
+            style="color:white"
+          >
             978-390-6747
-          </strong>
-        </a>
-
-      </div>
-
-
-      <div style="margin-top:25px;">
-
-        <a
-          class="btn-primary"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfD3EljZn41X9p-KjR8JZbVr9b1IEvwlljjiUKJWmIqfcTJIg/viewform"
-          target="_blank"
-        >
-          COMPLETAR SOLICITUD
-        </a>
+          </a>
+        </div>
 
       </div>
 
@@ -1256,33 +619,68 @@ footer{
 </section>
 
 
-<!-- DISCLAIMER -->
+<!-- APPLICATION -->
 
-<div class="disclaimer">
+<section
+  class="application"
+  id="solicitud"
+>
 
   <div class="container">
 
-    <p>
-      La información presentada en este sitio tiene fines
-      informativos y de reclutamiento. La disponibilidad de
-      oportunidades, compensación, incentivos, viajes y otros
-      beneficios puede variar. Los ingresos no están garantizados
-      y pueden depender del desempeño individual, actividad,
-      licenciamiento, ventas, referencias calificadas y otros
-      requisitos aplicables. Ciertas actividades relacionadas con
-      servicios financieros requieren las licencias y aprobaciones
-      correspondientes antes de poder realizarse.
-    </p>
+    <div class="application-header">
+
+      <div class="section-label">
+        SOLICITUD
+      </div>
+
+      <h2>
+        DA EL SIGUIENTE PASO.
+      </h2>
+
+      <p>
+        Completa la solicitud a continuación.
+        Responde todas las preguntas con información correcta
+        para que nuestro equipo pueda conocerte mejor.
+      </p>
+
+    </div>
+
+
+    <div class="form-frame">
+
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfD3EljZn41X9p-KjR8JZbVr9b1IEvwlljjiUKJWmIqfcTJIg/viewform?embedded=true&hl=es"
+        loading="lazy"
+      >
+        Cargando…
+      </iframe>
+
+    </div>
 
   </div>
 
-</div>
+</section>
 
 
 <!-- FOOTER -->
 
 <footer>
 
-  <div class="container footer-row">
+  <div class="container footer">
 
-    <
+    <div>
+      © 2026 Team Victorioso
+    </div>
+
+    <div>
+      Harry Smith · 978-390-6747
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
