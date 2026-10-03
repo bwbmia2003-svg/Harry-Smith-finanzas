@@ -1,1394 +1,915 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<title>Team Victorioso | Servicios Financieros</title>
-
-<meta
-  name="description"
-  content="Únete a Team Victorioso y explora una oportunidad profesional en servicios financieros."
->
+<title>Team Victorioso</title>
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#020a13;color:white;line-height:1.6}
+a{text-decoration:none}
+.container{width:min(1050px,92%);margin:auto}
 
-:root{
-  --dark:#020912;
-  --navy:#04182d;
-  --navy2:#082848;
-  --blue:#0a74da;
-  --blue2:#29a0ff;
-  --gold:#dcae55;
-  --gold2:#f3d58c;
-  --white:#ffffff;
-  --muted:#a8bbcf;
-  --light:#f4f7fb;
-  --border:rgba(255,255,255,.12);
+nav{background:#020d18;border-bottom:1px solid #18334c}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:20px;font-weight:900}
+.logo span{color:#29a0ff}
+.nav a,.btn{
+background:linear-gradient(135deg,#f3d58c,#dcae55);
+color:#07111c;padding:12px 18px;border-radius:9px;font-weight:900
 }
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--dark);
-  color:white;
-  line-height:1.6;
-}
-
-img{
-  width:100%;
-  display:block;
-}
-
-a{
-  text-decoration:none;
-}
-
-button,
-input,
-textarea{
-  font:inherit;
-}
-
-.container{
-  width:min(1100px,92%);
-  margin:auto;
-}
-
-.section-label{
-  color:var(--gold2);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  margin-bottom:10px;
-}
-
-.title{
-  font-size:clamp(34px,5vw,58px);
-  line-height:1.02;
-  letter-spacing:-.04em;
-}
-
-.title span{
-  color:var(--blue2);
-}
-
-.intro{
-  color:var(--muted);
-  max-width:700px;
-  margin-top:16px;
-}
-
-.btn{
-  display:inline-block;
-  background:linear-gradient(135deg,var(--gold2),var(--gold));
-  color:#06111c;
-  padding:14px 23px;
-  border-radius:10px;
-  font-weight:900;
-}
-
-
-/* NAV */
-
-nav{
-  background:#020d18;
-  border-bottom:1px solid var(--border);
-}
-
-.nav-inner{
-  min-height:72px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-
-.logo{
-  font-size:18px;
-  font-weight:900;
-  letter-spacing:.05em;
-}
-
-.logo span{
-  color:var(--blue2);
-}
-
-.nav-btn{
-  background:linear-gradient(135deg,var(--gold2),var(--gold));
-  color:#07111c;
-  font-weight:900;
-  padding:10px 16px;
-  border-radius:9px;
-  font-size:13px;
-}
-
-
-/* HERO */
 
 .hero{
-  padding:62px 0;
-  background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(18,120,230,.28),
-      transparent 35%
-    ),
-    linear-gradient(
-      135deg,
-      #020b14,
-      #06223f
-    );
+padding:55px 0;
+background:linear-gradient(135deg,#020b14,#062440)
 }
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.hero h1{font-size:clamp(45px,7vw,78px);line-height:.95}
+.hero h1 span{color:#29a0ff}
+.hero p{color:#bdcede;margin:23px 0 27px;max-width:580px}
+.photo{background:#07192c;padding:9px;border-radius:20px}
+.photo img{width:100%;display:block;border-radius:14px}
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-}
+.section{padding:65px 0}
+.label{color:#f3d58c;font-size:12px;font-weight:900;letter-spacing:.15em}
+.title{font-size:clamp(32px,5vw,52px);line-height:1.05;margin-top:7px}
+.title span{color:#29a0ff}
+.copy{color:#9fb4c9;margin-top:15px;max-width:700px}
 
-.tag{
-  display:inline-block;
-  color:var(--gold2);
-  border:1px solid rgba(226,180,92,.4);
-  background:rgba(226,180,92,.08);
-  padding:7px 13px;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.14em;
-  margin-bottom:20px;
-}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}
+.card{background:#071d33;border:1px solid #173651;border-radius:15px;padding:24px}
+.card p{color:#9fb4c9;font-size:14px;margin-top:7px}
 
-.hero h1{
-  font-size:clamp(46px,7vw,80px);
-  line-height:.93;
-  letter-spacing:-.055em;
-}
-
-.hero h1 span{
-  color:var(--blue2);
-}
-
-.hero p{
-  color:#c2d0df;
-  font-size:17px;
-  max-width:600px;
-  margin:24px 0 28px;
-}
-
-.photo{
-  padding:9px;
-  border-radius:22px;
-  background:#07192c;
-  border:1px solid var(--border);
-  box-shadow:0 25px 60px rgba(0,0,0,.45);
-}
-
-.photo img{
-  border-radius:15px;
-}
-
-
-/* OPPORTUNITY */
-
-.info{
-  padding:75px 0;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin-top:36px;
-}
-
-.card{
-  padding:25px;
-  border-radius:16px;
-  border:1px solid var(--border);
-  background:
-    linear-gradient(
-      145deg,
-      #092846,
-      #06172a
-    );
-}
-
-.card h3{
-  margin-bottom:8px;
-}
-
-.card p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-
-/* REQUIREMENTS */
-
-.requirements{
-  padding:70px 0;
-  background:
-    linear-gradient(
-      135deg,
-      #07315c,
-      #03182c
-    );
-}
-
-.req-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-}
-
-.req-list{
-  display:grid;
-  gap:11px;
-}
-
-.req{
-  background:rgba(255,255,255,.05);
-  border:1px solid var(--border);
-  padding:15px 17px;
-  border-radius:11px;
-}
-
-.req strong{
-  color:var(--gold2);
-  margin-right:8px;
-}
-
-
-/* CONTACT */
-
-.contact{
-  padding:65px 0;
-}
+.requirements{background:linear-gradient(135deg,#07315c,#03182c)}
+.req-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.req-list{display:grid;gap:10px}
+.req{padding:14px;background:#ffffff0b;border:1px solid #ffffff17;border-radius:10px}
+.req b{color:#f3d58c}
 
 .contact-box{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:35px;
-  align-items:center;
-  background:#07192d;
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:34px;
+background:#07192d;border:1px solid #173651;border-radius:18px;
+padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:25px
 }
+.contact-info{color:#a9bdd1}
+.contact-info strong,.contact-info a{color:white}
 
-.contact-details{
-  display:grid;
-  gap:15px;
-  color:var(--muted);
+.application{background:#f4f7fb;color:#071321;padding:65px 0}
+.application-head{text-align:center;max-width:700px;margin:0 auto 30px}
+.application-head .label{color:#a87926}
+.application-head p{color:#647589;margin-top:10px}
+
+form{max-width:820px;margin:auto;display:grid;gap:18px}
+.form-card{
+background:white;border:1px solid #dfe6ed;border-radius:16px;
+padding:27px;box-shadow:0 10px 30px #09203912
 }
+.form-card h3{font-size:22px;margin-bottom:18px}
+.form-num{color:#ac7c2a;font-size:11px;font-weight:900;letter-spacing:.14em}
 
-.contact-details strong,
-.contact-details a{
-  color:white;
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.full{grid-column:1/-1}
+
+label,.question{font-weight:700}
+input[type=text],input[type=email],input[type=tel],textarea{
+width:100%;padding:13px;border:1px solid #cbd6e0;
+border-radius:9px;background:#f9fbfd;color:#071321;font:inherit
 }
+textarea{resize:vertical}
 
-
-/* APPLICATION */
-
-.application{
-  padding:75px 0;
-  background:var(--light);
-  color:#071321;
+.question{padding:16px 0;border-bottom:1px solid #e4eaf0}
+.question:last-child{border-bottom:0}
+.options{display:flex;gap:9px;flex-wrap:wrap;margin-top:10px}
+.option{
+display:flex;align-items:center;gap:8px;background:#f8fafc;
+border:1px solid #d3dde7;padding:10px 13px;border-radius:9px;font-weight:400
 }
+.option input{accent-color:#0a74da}
 
-.application-header{
-  max-width:760px;
-  text-align:center;
-  margin:0 auto 38px;
+.submit-card{
+background:linear-gradient(135deg,#04182d,#09345d);
+color:white;border-radius:18px;padding:30px
 }
+.submit-card .label{color:#f3d58c}
+.submit-card p{color:#b7c9da}
 
-.application .section-label{
-  color:#a87825;
+.agree{
+display:flex;gap:10px;align-items:flex-start;
+padding:15px;background:#ffffff0b;border:1px solid #ffffff18;
+border-radius:10px;margin-top:18px;font-size:14px;font-weight:400
 }
-
-.application-header h2{
-  font-size:clamp(35px,5vw,56px);
-  line-height:1;
-  letter-spacing:-.04em;
-}
-
-.application-header p{
-  color:#607184;
-  margin-top:14px;
-}
-
-.application-form{
-  max-width:850px;
-  margin:auto;
-  display:grid;
-  gap:20px;
-}
-
-.form-section{
-  background:white;
-  border-radius:18px;
-  padding:30px;
-  border:1px solid #e1e8ef;
-  box-shadow:0 12px 35px rgba(5,28,50,.08);
-}
-
-.form-number{
-  color:#b4842d;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.18em;
-  margin-bottom:5px;
-}
-
-.form-section h3{
-  margin-bottom:22px;
-  font-size:24px;
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:17px;
-}
-
-.field{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-}
-
-.field.full{
-  grid-column:1/-1;
-}
-
-.field label,
-.question-title{
-  font-weight:700;
-  color:#10243a;
-}
-
-.field input,
-.field textarea{
-  width:100%;
-  border:1px solid #cad5df;
-  border-radius:10px;
-  padding:14px;
-  background:#f9fbfd;
-  color:#071321;
-  outline:none;
-}
-
-.field input:focus,
-.field textarea:focus{
-  border-color:#148cf2;
-  box-shadow:
-    0 0 0 3px rgba(20,140,242,.11);
-}
-
-textarea{
-  resize:vertical;
-}
-
-.question{
-  padding:19px 0;
-  border-bottom:1px solid #e6ecf2;
-}
-
-.question:last-child{
-  border-bottom:none;
-}
-
-.choices{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:12px;
-}
-
-.choices.vertical{
-  flex-direction:column;
-}
-
-.choice{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  padding:12px 15px;
-  border:1px solid #d4dde6;
-  border-radius:10px;
-  background:#f9fbfd;
-  cursor:pointer;
-}
-
-.choice input{
-  accent-color:#0875d8;
-  width:18px;
-  height:18px;
-}
-
-
-/* SUBMIT ENDING */
-
-.submit-section{
-  max-width:850px;
-  margin:auto;
-  padding:35px;
-  border-radius:20px;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(41,160,255,.18),
-      transparent 35%
-    ),
-    linear-gradient(
-      135deg,
-      #04182d,
-      #082848
-    );
-  color:white;
-}
-
-.submit-section .section-label{
-  color:var(--gold2);
-}
-
-.submit-section h3{
-  font-size:28px;
-  margin-bottom:8px;
-}
-
-.submit-copy{
-  color:#afc2d7;
-  margin-bottom:22px;
-}
-
-.agreement{
-  display:flex;
-  align-items:flex-start;
-  gap:12px;
-  padding:16px;
-  border-radius:12px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.1);
-  color:#d6e0eb;
-  font-size:14px;
-}
-
-.agreement input{
-  width:19px;
-  height:19px;
-  min-width:19px;
-  margin-top:2px;
-  accent-color:var(--gold);
-}
+.agree input{width:18px;height:18px;margin-top:2px;accent-color:#dcae55}
 
 .submit-btn{
-  display:block;
-  width:100%;
-  margin-top:22px;
-  padding:19px 20px;
-  border:0;
-  border-radius:11px;
-  background:
-    linear-gradient(
-      135deg,
-      var(--gold2),
-      var(--gold)
-    );
-  color:#06111c;
-  font-weight:900;
-  font-size:16px;
-  cursor:pointer;
+width:100%;margin-top:20px;padding:18px;border:0;border-radius:10px;
+background:linear-gradient(135deg,#f3d58c,#dcae55);
+font-weight:900;font-size:16px;color:#07111c;cursor:pointer
 }
 
-.submit-btn:hover{
-  filter:brightness(1.05);
+.status{display:none;margin-bottom:20px;padding:18px;border-radius:12px;text-align:center}
+.status.success{display:block;background:#e6f7ec;color:#176238}
+.status.error{display:block;background:#ffeded;color:#9d2626}
+
+footer{padding:28px 0;background:#00050a;color:#72869a;font-size:13px}
+.footer{display:flex;justify-content:space-between;gap:20px}
+
+@media(max-width:750px){
+.hero-grid,.req-grid,.contact-box,.grid{grid-template-columns:1fr}
+.cards{grid-template-columns:1fr}
+.full{grid-column:auto}
 }
-
-.submit-btn:disabled{
-  opacity:.65;
-  cursor:not-allowed;
+@media(max-width:520px){
+.hero h1{font-size:47px}
+.section,.application{padding:50px 0}
+.form-card,.submit-card{padding:21px 16px}
+.options{flex-direction:column}
+.option{width:100%}
+.footer{flex-direction:column}
 }
-
-.form-note{
-  color:#8ea2b7;
-  font-size:12px;
-  margin-top:12px;
-  text-align:center;
-}
-
-
-/* STATUS */
-
-.form-status{
-  display:none;
-  max-width:850px;
-  margin:0 auto 20px;
-  padding:20px;
-  border-radius:13px;
-  text-align:center;
-  font-weight:700;
-}
-
-.form-status.success{
-  display:block;
-  background:#e8f8ef;
-  color:#17623a;
-  border:1px solid #b7e0c8;
-}
-
-.form-status.error{
-  display:block;
-  background:#fff0f0;
-  color:#9a2525;
-  border:1px solid #edc1c1;
-}
-
-
-/* HONEYPOT */
-
-.hidden-field{
-  position:absolute;
-  overflow:hidden;
-  clip:rect(0 0 0 0);
-  height:1px;
-  width:1px;
-  margin:-1px;
-  padding:0;
-  border:0;
-}
-
-
-/* FOOTER */
-
-footer{
-  padding:30px 0;
-  background:#00060c;
-  border-top:1px solid var(--border);
-}
-
-.footer{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  color:#74879b;
-  font-size:13px;
-}
-
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-  .hero-grid,
-  .req-grid,
-  .contact-box{
-    grid-template-columns:1fr;
-  }
-
-  .cards{
-    grid-template-columns:1fr;
-  }
-
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-
-  .field.full{
-    grid-column:auto;
-  }
-
-}
-
-@media(max-width:550px){
-
-  .hero{
-    padding:44px 0;
-  }
-
-  .hero h1{
-    font-size:48px;
-  }
-
-  .info,
-  .contact,
-  .application{
-    padding:55px 0;
-  }
-
-  .form-section{
-    padding:22px 17px;
-  }
-
-  .submit-section{
-    padding:25px 18px;
-  }
-
-  .choices{
-    flex-direction:column;
-  }
-
-  .choice{
-    width:100%;
-  }
-
-  .btn{
-    width:100%;
-    text-align:center;
-  }
-
-  .footer{
-    flex-direction:column;
-  }
-
-}
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- NAV -->
-
 <nav>
-
-<div class="container nav-inner">
-
-  <div class="logo">
-    TEAM <span>VICTORIOSO</span>
-  </div>
-
-  <a
-    href="#solicitud"
-    class="nav-btn"
-  >
-    APLICAR
-  </a>
-
+<div class="container nav">
+<div class="logo">TEAM <span>VICTORIOSO</span></div>
+<a href="#solicitud">APLICAR</a>
 </div>
-
 </nav>
 
 
-<!-- HERO -->
-
 <section class="hero">
-
 <div class="container hero-grid">
 
-  <div>
+<div>
+<div class="label">SERVICIOS FINANCIEROS</div>
 
-    <div class="tag">
-      SERVICIOS FINANCIEROS
-    </div>
+<h1>
+TU FUTURO.<br>
+<span>TUS TÉRMINOS.</span>
+</h1>
 
-    <h1>
-      TU FUTURO.<br>
-      <span>TUS TÉRMINOS.</span>
-    </h1>
+<p>
+Únete a Team Victorioso y descubre una oportunidad profesional
+con flexibilidad, capacitación y desarrollo dentro de la industria
+de servicios financieros.
+</p>
 
-    <p>
-      Únete a Team Victorioso y descubre una oportunidad
-      profesional con flexibilidad, capacitación y desarrollo
-      dentro de la industria de servicios financieros.
-    </p>
-
-    <a
-      href="#solicitud"
-      class="btn"
-    >
-      COMPLETAR SOLICITUD
-    </a>
-
-  </div>
-
-
-  <div class="photo">
-
-    <img
-      src="file_00000000875881f684bc1fa35f8fa650.png"
-      alt="Team Victorioso"
-    >
-
-  </div>
-
+<a class="btn" href="#solicitud">
+COMPLETAR SOLICITUD
+</a>
 </div>
 
+<div class="photo">
+<img
+src="file_00000000875881f684bc1fa35f8fa650.png"
+alt="Team Victorioso"
+>
+</div>
+
+</div>
 </section>
 
 
-<!-- OPPORTUNITY -->
-
-<section class="info">
-
+<section class="section">
 <div class="container">
 
-  <div class="section-label">
-    LA OPORTUNIDAD
-  </div>
+<div class="label">LA OPORTUNIDAD</div>
 
-  <h2 class="title">
-    APRENDE. CRECE.
-    <span>CONSTRUYE.</span>
-  </h2>
+<h2 class="title">
+APRENDE. CRECE.
+<span>CONSTRUYE.</span>
+</h2>
 
-  <p class="intro">
-    Buscamos personas motivadas y dispuestas a aprender.
-    No necesitas comenzar como experto en finanzas.
-    Puedes desarrollar nuevas habilidades mientras recibes
-    capacitación y orientación profesional.
-  </p>
+<p class="copy">
+Buscamos personas motivadas y dispuestas a aprender.
+No necesitas comenzar como experto en finanzas.
+Recibe capacitación mientras desarrollas nuevas habilidades.
+</p>
 
+<div class="cards">
 
-  <div class="cards">
+<div class="card">
+<h3>Flexibilidad</h3>
+<p>Opciones que pueden adaptarse a diferentes horarios y disponibilidad.</p>
+</div>
 
+<div class="card">
+<h3>Capacitación</h3>
+<p>Aprende sobre la industria y recibe orientación durante tu desarrollo.</p>
+</div>
 
-    <div class="card">
-
-      <h3>
-        Flexibilidad
-      </h3>
-
-      <p>
-        Opciones que pueden adaptarse a distintos horarios
-        y niveles de disponibilidad.
-      </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <h3>
-        Capacitación y licenciamiento
-      </h3>
-
-      <p>
-        Aprende sobre la industria y recibe orientación
-        durante el proceso profesional correspondiente.
-      </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <h3>
-        Crecimiento e incentivos
-      </h3>
-
-      <p>
-        Desarrolla comunicación, liderazgo y educación financiera
-        con oportunidades basadas en desempeño.
-      </p>
-
-    </div>
-
-
-  </div>
+<div class="card">
+<h3>Crecimiento</h3>
+<p>Desarrolla liderazgo, comunicación y conocimiento financiero.</p>
+</div>
 
 </div>
 
+</div>
 </section>
 
 
-<!-- REQUIREMENTS -->
-
-<section class="requirements">
-
+<section class="section requirements">
 <div class="container req-grid">
 
-  <div>
+<div>
+<div class="label">REQUISITOS</div>
 
-    <div class="section-label">
-      REQUISITOS
-    </div>
+<h2 class="title">
+¿LISTO PARA
+<span>DAR EL PASO?</span>
+</h2>
 
-    <h2 class="title">
-      ¿LISTO PARA
-      <span>DAR EL PASO?</span>
-    </h2>
+<p class="copy">
+Algunas actividades dentro de servicios financieros requieren
+licenciamiento y verificación de antecedentes.
+</p>
+</div>
 
-    <p class="intro">
-      Algunas actividades dentro de servicios financieros
-      requieren licencias, documentación y verificación
-      de antecedentes.
-    </p>
+<div class="req-list">
 
-  </div>
+<div class="req"><b>✓</b> Tener 18 años o más.</div>
 
+<div class="req"><b>✓</b> Ser elegible para trabajar en Estados Unidos.</div>
 
-  <div class="req-list">
+<div class="req"><b>✓</b> Tener un número de Seguro Social válido.</div>
 
-    <div class="req">
-      <strong>✓</strong>
-      Tener 18 años o más.
-    </div>
+<div class="req"><b>✓</b> Cumplir con la verificación de antecedentes.</div>
 
-    <div class="req">
-      <strong>✓</strong>
-      Ser elegible para trabajar en los Estados Unidos.
-    </div>
-
-    <div class="req">
-      <strong>✓</strong>
-      Tener un número de Seguro Social válido.
-    </div>
-
-    <div class="req">
-      <strong>✓</strong>
-      Cumplir con los requisitos de verificación de antecedentes.
-    </div>
-
-    <div class="req">
-      <strong>✓</strong>
-      Estar dispuesto a completar capacitación y licenciamiento.
-    </div>
-
-  </div>
+<div class="req"><b>✓</b> Estar dispuesto a completar capacitación y licenciamiento.</div>
 
 </div>
 
+</div>
 </section>
 
 
-<!-- CONTACT -->
-
-<section class="contact">
-
+<section class="section">
 <div class="container">
 
-  <div class="contact-box">
+<div class="contact-box">
 
-    <div>
+<div>
+<div class="label">TU CONTACTO</div>
+<h2 class="title">HARRY <span>SMITH</span></h2>
+</div>
 
-      <div class="section-label">
-        TU CONTACTO
-      </div>
+<div class="contact-info">
 
-      <h2 class="title">
-        HARRY
-        <span>SMITH</span>
-      </h2>
+<strong>Correo electrónico</strong><br>
+Hsmith@teamvictorioso
 
-    </div>
+<br><br>
 
-
-    <div class="contact-details">
-
-      <div>
-        <strong>Correo electrónico</strong><br>
-        Hsmith@teamvictorioso
-      </div>
-
-      <div>
-
-        <strong>Teléfono</strong><br>
-
-        <a href="tel:+19783906747">
-          978-390-6747
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
+<strong>Teléfono</strong><br>
+<a href="tel:+19783906747">
+978-390-6747
+</a>
 
 </div>
 
+</div>
+
+</div>
 </section>
 
 
-<!-- APPLICATION -->
+<section class="application" id="solicitud">
+<div class="container">
 
-<section
-  class="application"
-  id="solicitud"
+<div class="application-head">
+
+<div class="label">TEAM VICTORIOSO</div>
+
+<h2 class="title">
+SOLICITUD
+</h2>
+
+<p>
+Completa todas las preguntas para enviar tu información
+a Team Victorioso.
+</p>
+
+</div>
+
+
+<div id="status" class="status"></div>
+
+
+<form
+id="applicationForm"
+name="team-victorioso"
+method="POST"
+data-netlify="true"
+netlify-honeypot="bot-field"
 >
 
-<div class="container">
+<input
+type="hidden"
+name="form-name"
+value="team-victorioso"
+>
 
+<p style="display:none">
+<label>
+No completar
+<input name="bot-field">
+</label>
+</p>
 
-  <div class="application-header">
 
-    <div class="section-label">
-      SOLICITUD
-    </div>
+<!-- QUESTION 1 -->
 
-    <h2>
-      DA EL SIGUIENTE PASO.
-    </h2>
+<div class="form-card">
 
-    <p>
-      Completa la solicitud para que Team Victorioso pueda
-      conocer más sobre ti, tus metas y tu disponibilidad.
-    </p>
+<div class="form-num">
+01 · INFORMACIÓN PERSONAL
+</div>
 
-  </div>
+<h3>
+Cuéntanos sobre ti
+</h3>
 
+<div class="grid">
 
-  <div
-    class="form-status"
-    id="formStatus"
-  ></div>
+<div class="field full">
+<label for="nombre">
+Nombre completo *
+</label>
 
+<input
+id="nombre"
+name="nombre"
+type="text"
+required
+>
+</div>
 
-  <form
-    class="application-form"
-    id="applicationForm"
-    name="team-victorioso-application"
-    method="POST"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-  >
 
+<div class="field">
 
-    <!-- REQUIRED BY NETLIFY -->
+<label for="email">
+Correo electrónico *
+</label>
 
-    <input
-      type="hidden"
-      name="form-name"
-      value="team-victorioso-application"
-    >
+<input
+id="email"
+name="email"
+type="email"
+required
+>
 
+</div>
 
-    <!-- SPAM PROTECTION -->
 
-    <p class="hidden-field">
+<div class="field">
 
-      <label>
-        No completar:
+<label for="telefono">
+Número de teléfono *
+</label>
 
-        <input
-          name="bot-field"
-          type="text"
-        >
+<input
+id="telefono"
+name="telefono"
+type="tel"
+required
+>
 
-      </label>
+</div>
 
-    </p>
 
+<div class="field full">
 
-    <!-- 01 PERSONAL -->
+<label for="ubicacion">
+Ciudad y estado donde vives *
+</label>
 
-    <div class="form-section">
+<input
+id="ubicacion"
+name="ubicacion"
+type="text"
+required
+>
 
-      <div class="form-number">
-        01 · INFORMACIÓN PERSONAL
-      </div>
+</div>
 
-      <h3>
-        Cuéntanos sobre ti
-      </h3>
+</div>
+</div>
 
 
-      <div class="form-grid">
+<!-- QUESTION 2 -->
 
+<div class="form-card">
 
-        <div class="field full">
+<div class="form-num">
+02 · ELEGIBILIDAD
+</div>
 
-          <label for="nombre">
-            Nombre completo *
-          </label>
+<h3>
+Información básica
+</h3>
 
-          <input
-            id="nombre"
-            name="nombre"
-            type="text"
-            autocomplete="name"
-            required
-          >
 
-        </div>
+<div class="question">
 
+¿Tienes 18 años o más? *
 
-        <div class="field">
+<div class="options">
 
-          <label for="email">
-            Correo electrónico *
-          </label>
+<label class="option">
+<input
+type="radio"
+name="mayor_de_18"
+value="Sí"
+required
+>
+Sí
+</label>
 
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autocomplete="email"
-            required
-          >
+<label class="option">
+<input
+type="radio"
+name="mayor_de_18"
+value="No"
+>
+No
+</label>
 
-        </div>
+</div>
 
+</div>
 
-        <div class="field">
 
-          <label for="telefono">
-            Número de teléfono *
-          </label>
+<div class="question">
 
-          <input
-            id="telefono"
-            name="telefono"
-            type="tel"
-            autocomplete="tel"
-            required
-          >
+¿Eres elegible para trabajar legalmente en Estados Unidos? *
 
-        </div>
+<div class="options">
 
+<label class="option">
+<input
+type="radio"
+name="elegible_usa"
+value="Sí"
+required
+>
+Sí
+</label>
 
-        <div class="field full">
+<label class="option">
+<input
+type="radio"
+name="elegible_usa"
+value="No"
+>
+No
+</label>
 
-          <label for="ubicacion">
-            Ciudad y estado donde vives actualmente *
-          </label>
+</div>
 
-          <input
-            id="ubicacion"
-            name="ubicacion"
-            type="text"
-            placeholder="Ej. Miami, Florida"
-            required
-          >
+</div>
 
-        </div>
 
+<div class="question">
 
-      </div>
+¿Tienes un número de Seguro Social válido? *
 
-    </div>
+<div class="options">
 
+<label class="option">
+<input
+type="radio"
+name="ssn_valido"
+value="Sí"
+required
+>
+Sí
+</label>
 
-    <!-- 02 ELIGIBILITY -->
+<label class="option">
+<input
+type="radio"
+name="ssn_valido"
+value="No"
+>
+No
+</label>
 
-    <div class="form-section">
+</div>
 
-      <div class="form-number">
-        02 · ELEGIBILIDAD
-      </div>
+</div>
 
-      <h3>
-        Información básica
-      </h3>
 
+<div class="question">
 
-      <div class="question">
+¿Estás dispuesto/a a completar una verificación
+federal de antecedentes si es requerida? *
 
-        <div class="question-title">
-          ¿Tienes 18 años de edad o más? *
-        </div>
+<div class="options">
 
-        <div class="choices">
+<label class="option">
+<input
+type="radio"
+name="antecedentes"
+value="Sí"
+required
+>
+Sí
+</label>
 
-          <label class="choice">
+<label class="option">
+<input
+type="radio"
+name="antecedentes"
+value="No"
+>
+No
+</label>
 
-            <input
-              type="radio"
-              name="mayor_de_18"
-              value="Sí"
-              required
-            >
+</div>
 
-            Sí
+</div>
 
-          </label>
+</div>
 
 
-          <label class="choice">
+<!-- QUESTION 3 -->
 
-            <input
-              type="radio"
-              name="mayor_de_18"
-              value="No"
-            >
+<div class="form-card">
 
-            No
+<div class="form-num">
+03 · LICENCIAMIENTO
+</div>
 
-          </label>
+<h3>
+Experiencia y capacitación
+</h3>
 
-        </div>
 
-      </div>
+<div class="question">
 
+¿Cuál describe mejor tu situación actual? *
 
-      <div class="question">
+<div class="options">
 
-        <div class="question-title">
-          ¿Eres elegible para trabajar legalmente
-          en los Estados Unidos? *
-        </div>
+<label class="option">
+<input
+type="radio"
+name="licencia"
+value="Tengo licencia"
+required
+>
+Tengo licencia
+</label>
 
-        <div class="choices">
+<label class="option">
+<input
+type="radio"
+name="licencia"
+value="Estoy en proceso"
+>
+Estoy en proceso
+</label>
 
-          <label class="choice">
+<label class="option">
+<input
+type="radio"
+name="licencia"
+value="No tengo licencia"
+>
+No tengo licencia
+</label>
 
-            <input
-              type="radio"
-              name="elegible_trabajo_usa"
-              value="Sí"
-              required
-            >
+</div>
 
-            Sí
+</div>
 
-          </label>
 
+<div class="question">
 
-          <label class="choice">
+¿Estás dispuesto/a a completar la capacitación
+y licenciamiento requeridos? *
 
-            <input
-              type="radio"
-              name="elegible_trabajo_usa"
-              value="No"
-            >
+<div class="options">
 
-            No
+<label class="option">
+<input
+type="radio"
+name="dispuesto_licencia"
+value="Sí"
+required
+>
+Sí
+</label>
 
-          </label>
+<label class="option">
+<input
+type="radio"
+name="dispuesto_licencia"
+value="No"
+>
+No
+</label>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
+</div>
 
-      <div class="question">
 
-        <div class="question-title">
-          ¿Tienes un número de Seguro Social válido? *
-        </div>
+<!-- QUESTION 4 -->
 
-        <div class="choices">
+<div class="form-card">
 
-          <label class="choice">
+<div class="form-num">
+04 · DISPONIBILIDAD
+</div>
 
-            <input
-              type="radio"
-              name="ssn_valido"
-              value="Sí"
-              required
-            >
+<h3>
+¿Qué tipo de oportunidad buscas?
+</h3>
 
-            Sí
 
-          </label>
+<div class="question">
 
+¿Cuál opción te interesa? *
 
-          <label class="choice">
+<div class="options">
 
-            <input
-              type="radio"
-              name="ssn_valido"
-              value="No"
-            >
+<label class="option">
+<input
+type="radio"
+name="tipo_oportunidad"
+value="Medio tiempo"
+required
+>
+Medio tiempo
+</label>
 
-            No
+<label class="option">
+<input
+type="radio"
+name="tipo_oportunidad"
+value="Tiempo completo"
+>
+Tiempo completo
+</label>
 
-          </label>
+<label class="option">
+<input
+type="radio"
+name="tipo_oportunidad"
+value="Ambas"
+>
+Ambas opciones
+</label>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
 
-      <div class="question">
+<div class="question">
 
-        <div class="question-title">
-          ¿Estás dispuesto/a a completar una verificación
-          federal de antecedentes si es requerida? *
-        </div>
+¿Estás cómodo/a trabajando de forma remota
+o híbrida? *
 
-        <div class="choices">
+<div class="options">
 
-          <label class="choice">
+<label class="option">
+<input
+type="radio"
+name="remoto"
+value="Sí"
+required
+>
+Sí
+</label>
 
-            <input
-              type="radio"
-              name="verificacion_antecedentes"
-              value="Sí"
-              required
-            >
+<label class="option">
+<input
+type="radio"
+name="remoto"
+value="No"
+>
+No
+</label>
 
-            Sí
+</div>
 
-          </label>
+</div>
 
+</div>
 
-          <label class="choice">
 
-            <input
-              type="radio"
-              name="verificacion_antecedentes"
-              value="No"
-            >
+<!-- QUESTION 5 -->
 
-            No
+<div class="form-card">
 
-          </label>
+<div class="form-num">
+05 · TUS METAS
+</div>
 
-        </div>
+<h3>
+Queremos conocerte mejor
+</h3>
 
-      </div>
 
+<div class="field">
 
-    </div>
+<label for="interes">
+¿Qué te interesa de esta oportunidad? *
+</label>
 
+<textarea
+id="interes"
+name="interes"
+rows="4"
+required
+></textarea>
 
-    <!-- 03 LICENSING -->
+</div>
 
-    <div class="form-section">
 
-      <div class="form-number">
-        03 · LICENCIAMIENTO
-      </div>
+<br>
 
-      <h3>
-        Experiencia y capacitación
-      </h3>
 
+<div class="field">
 
-      <div class="question">
+<label for="metas">
+¿Cuáles son tus principales metas profesionales
+o financieras? *
+</label>
 
-        <div class="question-title">
-          ¿Cuál describe mejor tu situación actual? *
-        </div>
+<textarea
+id="metas"
+name="metas"
+rows="4"
+required
+></textarea>
 
+</div>
 
-        <div class="choices vertical">
 
-          <label class="choice">
+<br>
 
-            <input
-              type="radio"
-              name="estado_licencia"
-              value="Actualmente tengo licencia"
-              required
-            >
 
-            Actualmente tengo licencia.
+<div class="field">
 
-          </label>
+<label for="adicional">
+¿Hay algo más que te gustaría que sepamos sobre ti?
+</label>
 
+<textarea
+id="adicional"
+name="informacion_adicional"
+rows="3"
+></textarea>
 
-          <label class="choice">
+</div>
 
-            <input
-              type="radio"
-              name="estado_licencia"
-              value="Actualmente estoy en proceso"
-            >
+</div>
 
-            Actualmente estoy en proceso.
 
-          </label>
+<!-- FINAL SUBMISSION -->
 
+<div class="submit-card">
 
-          <label class="choice">
+<div class="label">
+ÚLTIMO PASO
+</div>
 
-            <input
-              type="radio"
-              name="estado_licencia"
-              value="No tengo licencia todavía"
-            >
+<h3>
+Envía tu solicitud a Team Victorioso
+</h3>
 
-            No tengo licencia todavía.
+<p>
+Revisa tus respuestas antes de enviar.
+</p>
 
-          </label>
 
-        </div>
+<label class="agree">
 
-      </div>
+<input
+type="checkbox"
+name="confirmacion"
+value="Aceptado"
+required
+>
 
+<span>
+Confirmo que la información proporcionada es correcta.
+Entiendo que enviar esta solicitud no garantiza empleo,
+contratación, aceptación ni ingresos.
+</span>
 
-      <div class="question">
+</label>
 
-        <div class="question-title">
-          ¿Estás dispuesto/a a completar la capacitación
-          y el proceso de licenciamiento requerido? *
-        </div>
 
-        <div class="choices">
+<button
+type="submit"
+id="submitButton"
+class="submit-btn"
+>
+ENVIAR SOLICITUD A TEAM VICTORIOSO
+</button>
 
-          <label class="choice">
+</div>
 
-            <input
-              type="radio"
-              name="dispuesto_licenciamiento"
-              value="Sí"
-              required
-            >
 
-            Sí
+</form>
 
-          </label>
+</div>
+</section>
 
 
-          <label class="choice">
+<footer>
 
-            <input
-              type="radio"
-              name="dispuesto_licenciamiento"
-              value="No"
-            >
+<div class="container footer">
 
-            No
+<div>
+© 2026 Team Victorioso
+</div>
 
-          </label>
+<div>
+Harry Smith · 978-390-6747
+</div>
 
-        </div>
+</div>
 
-      </div>
+</footer>
 
 
-    </div>
+<script>
 
+const form = document.getElementById("applicationForm");
+const button = document.getElementById("submitButton");
+const statusBox = document.getElementById("status");
 
-    <!-- 04 AVAILABILITY -->
+form.addEventListener("submit", async function(event){
 
-    <div class="form-section">
+event.preventDefault();
 
-      <div class="form-number">
-        04 · DISPONIBILIDAD
-      </div>
+if(!form.checkValidity()){
+form.reportValidity();
+return;
+}
 
-      <h3>
-        ¿Qué estás buscando?
-      </h3>
+button.disabled = true;
+button.textContent = "ENVIANDO...";
 
+const formData = new FormData(form);
 
-      <div class="question">
+try{
 
-        <div class="question-title">
-          ¿Qué tipo de oportunidad te interesa? *
-        </div>
+const response = await fetch("/",{
+method:"POST",
+headers:{
+"Content-Type":"application/x-www-form-urlencoded"
+},
+body:new URLSearchParams(formData).toString()
+});
 
+if(!response.ok){
+throw new Error("Error");
+}
 
-        <div class="choices vertical">
+form.reset();
 
-          <label class="choice">
+statusBox.className="status success";
+statusBox.innerHTML=
+"<strong>¡Solicitud enviada correctamente!</strong><br>Gracias por tu interés en Team Victorioso. Hemos recibido tu información.";
 
-            <input
-              type="radio"
-              name="tipo_oportunidad"
-              value="Medio tiempo"
-       
+button.textContent="SOLICITUD ENVIADA";
+
+statusBox.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+
+catch(error){
+
+statusBox.className="status error";
+
+statusBox.innerHTML=
+"<strong>No se pudo enviar la solicitud.</strong><br>Inténtalo nuevamente.";
+
+button.disabled=false;
+button.textContent="ENVIAR SOLICITUD A TEAM VICTORIOSO";
+
+}
+
+});
+
+</script>
+
+</body>
+  </html>
